@@ -96,6 +96,7 @@ html,body{
 
 .phrase-container .phare-style span{
     color: var(--color-secondary);
+    
 }
 
 
@@ -109,6 +110,8 @@ html,body{
     left: 15px;
     top: 40px;
     object-fit: contain;
+    filter: drop-shadow(30px 10px 4px #0a111e);
+
 
 }
 
@@ -133,7 +136,6 @@ html,body{
     color: var(--colorTipography);
     font-size: 1.6rem;
     background-color: rgba(229, 229, 229, 0.1);
-
 }
 
 .games-container .game-card img{
@@ -166,15 +168,15 @@ html,body{
     .games-container .game-card input{
         padding: 6px 20px;
     }
-    
+
 }
 @media screen and (max-width: 1280px){
     .phrase-container .phare-style{
         font-size: 5.3rem;
         line-height: 80px;
     }
-     .games-container .game-card{
+    .games-container .game-card{
         font-size: 1.4rem;
     }
-    
+
 }
