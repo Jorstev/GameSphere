@@ -149,6 +149,12 @@ html,body{
     border: var(--color-secondary);
     outline: none;
 }
+
+.games-container .games-more{
+    width: 100%;
+    font-size: 1.6rem;
+    padding-left: 50px;
+}
 @media screen and (max-width: 1670px){
     .phrase-container .phare-style{
         font-size: 6rem;
