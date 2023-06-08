@@ -1,0 +1,174 @@
+
+
+:root{
+    --color-primary: #13213C;
+    --colorTipography: #ffffff;
+    --color-secondary: #FCA311;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+/*Header section*/
+
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+
+.nav-container{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+}
+.nav-links{
+    width: 30%;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+.nav-links ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links ul li img{
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-links ul li a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
+}
+
+.nav-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
+
+/*Main section*/
+
+/*Phrase section*/
+.introduction-container{
+    display: flex;
+    height: 93vh;
+    width: 100%;
+    position: relative;
+    padding-top: 50px;
+}
+
+.phrase-container{
+    color: var(--colorTipography);
+    height: 100%;
+    width: 60%;
+    border-right: 2px solid #B6B6B6;
+}
+
+.phrase-container .phare-style{
+    position: absolute;
+    width: 60vw;
+    left: 28px;
+    top: 80px;
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 120px;
+    z-index: 2;
+    color: var(--colorTipography);
+}
+
+.phrase-container .phare-style span{
+    color: var(--color-secondary);
+}
+
+
+
+
+.phrase-container img{
+    z-index: 1;
+    position: absolute;
+
+    height: 100vh;
+    left: 15px;
+    top: 40px;
+    object-fit: contain;
+
+}
+
+/*games section*/
+
+.games-container{
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.games-container .game-card{
+    height: 40vh;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    background-color: rgba(229, 229, 229, 0.1);
+
+}
+
+.games-container .game-card img{
+    object-fit: contain;
+    height: 70%;
+    width: 100%;
+}
+
+.games-container .game-card input{
+    background-color: var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: var(--color-secondary);
+    outline: none;
+}
+@media screen and (max-width: 1670px){
+    .phrase-container .phare-style{
+        font-size: 6rem;
+        line-height: 100px;
+    }
+    .games-container .game-card{
+        font-size: 1.5rem;
+    }
+    .games-container .game-card input{
+        padding: 6px 20px;
+    }
+    
+}
+@media screen and (max-width: 1280px){
+    .phrase-container .phare-style{
+        font-size: 5.3rem;
+        line-height: 80px;
+    }
+     .games-container .game-card{
+        font-size: 1.4rem;
+    }
+    
+}
