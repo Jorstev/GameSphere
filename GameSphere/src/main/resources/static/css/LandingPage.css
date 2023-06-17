@@ -23,6 +23,11 @@ html,body{
     box-sizing: border-box;
 }
 
+.nav-container.sticky{
+    position: fixed;
+    background-color: rgba(19, 33, 60, 0.8);
+    z-index: 3;
+}
 
 .nav-container{
     height: 7vh;
