@@ -185,7 +185,13 @@ html,body{
     width: 100%;
     display: flex;
     justify-content: space-around;
+    transition: transform 2s, opacity 2s;
 
+}
+
+.news-container--hidden{
+    opacity: 0;
+    transform: translateY(6rem);
 }
 
 .news-container .news-specific-container .news-specific-img-container{
