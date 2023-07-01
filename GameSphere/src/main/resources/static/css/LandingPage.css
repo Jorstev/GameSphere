@@ -159,12 +159,19 @@ html,body{
     border-radius: 4px;
     border: var(--color-secondary);
     outline: none;
+    cursor: pointer;
 }
 
 .view-more{
     width: 100%;
     font-size: 1.6rem;
     padding-left: 50px;
+
+}
+
+.view-more a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
 }
 
 
