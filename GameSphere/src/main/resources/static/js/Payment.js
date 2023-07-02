@@ -35,24 +35,30 @@ const AddtoCart = document.querySelectorAll('.btn-AddCart');
 const cartNumber = document.querySelector('#cart-number');
 const shoppingCart = document.querySelector('.fa-cart-shopping');
 const productContainer = document.querySelector('.items-container');
+const productItem = document.querySelectorAll('.item');
+const btnRemove = document.querySelector('.btn-remove');
 
-productContainer.innerHTML="";
+productContainer.innerHTML = "";
 
 AddtoCart.forEach((btn) => {
     btn.addEventListener('click', function () {
         cartNumber.textContent++;
         let parent = btn.parentElement;
-        console.log(parent);
+
         let name = parent.querySelector('.game-Name').textContent;
         let price = parent.querySelector('.game-price').textContent;
         let html = `<div class="item">
                         <p>${name}</p>
                         <p>$<span class="class">${price}</span></p>
+                        <input class="btn-remove" type="submit" value="Eliminar" name="Eliminar" />
                     </div>`;
         productContainer.insertAdjacentHTML('afterbegin', html);
-        
+    });
+});
 
-        console.log('Hi here', itemsArray);
-
+console.log(productItem);
+btnRemove.forEach(function(btn){
+    btn.addEventListener('click', function () {
+        productItem.remove();
     });
 });

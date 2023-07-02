@@ -88,6 +88,10 @@ html,body{
     .games-container .game-card input{
         padding: 6px 20px;
     }
+    .ItemsBuy .items-container .btn-remove{
+        padding: 8px 14px;
+    }
+   
 
 
 }
@@ -96,7 +100,10 @@ html,body{
     .games-container .game-card{
         font-size: 1.4rem;
     }
-
+    .ItemsBuy .items-container .btn-remove{
+        padding: 8px 14px;
+    }
+   
 
 }
 .nav-container{
@@ -178,6 +185,17 @@ html,body{
     flex-direction: row;
     border-bottom: 1px solid #E5E5E5;
 }
+
+.ItemsBuy .items-container .btn-remove{
+    padding: 10px 20px;
+    background-color: red;
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    border-radius: 3px;
+    font-family: 'Poppins', sans-serif;
+
+
+}
 .container{
     min-height: 93vh;
     background: #eee;
@@ -205,6 +223,8 @@ html,body{
     display: block;
     color:#999;
     padding-bottom: 5px;
+    font-size: 1.6rem;
+    
 }
 
 .container form .inputBox input,
