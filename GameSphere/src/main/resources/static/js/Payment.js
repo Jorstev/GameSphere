@@ -1,4 +1,4 @@
-
+'use strict';
 document.querySelector('.card-number-input').oninput = () => {
     document.querySelector('.card-number-box').innerText = document.querySelector('.card-number-input').value;
 }
@@ -28,3 +28,31 @@ document.querySelector('.cvv-input').onmouseleave = () => {
 document.querySelector('.cvv-input').oninput = () => {
     document.querySelector('.cvv-box').innerText = document.querySelector('.cvv-input').value;
 }
+
+
+const AddtoCart = document.querySelectorAll('.btn-AddCart');
+
+const cartNumber = document.querySelector('#cart-number');
+const shoppingCart = document.querySelector('.fa-cart-shopping');
+const productContainer = document.querySelector('.items-container');
+
+productContainer.innerHTML="";
+
+AddtoCart.forEach((btn) => {
+    btn.addEventListener('click', function () {
+        cartNumber.textContent++;
+        let parent = btn.parentElement;
+        console.log(parent);
+        let name = parent.querySelector('.game-Name').textContent;
+        let price = parent.querySelector('.game-price').textContent;
+        let html = `<div class="item">
+                        <p>${name}</p>
+                        <p>$<span class="class">${price}</span></p>
+                    </div>`;
+        productContainer.insertAdjacentHTML('afterbegin', html);
+        
+
+        console.log('Hi here', itemsArray);
+
+    });
+});
