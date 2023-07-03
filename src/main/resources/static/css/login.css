@@ -1,0 +1,137 @@
+:root{
+    --color-primary: #ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+
+/*Header section*/
+
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    box-sizing: border-box;
+}
+
+.nav-container.sticky{
+    position: fixed;
+    background-color: rgba(19, 33, 60, 0.8);
+    z-index: 3;
+}
+
+.nav-container{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    background-color: #13213C;
+    color:#ffffff;
+}
+.nav-links{
+    width: 30%;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+.nav-links ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links ul li img{
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-links ul li a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
+}
+
+.nav-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
+
+/* Body */
+
+h1{
+color: #13213C;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: relative;
+padding-top: 30px;
+padding-left: 30px;
+padding-bottom: 20px;
+}
+
+
+.news-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    padding: 0 100px;
+}
+
+.news-container .news-specific-container{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: transform 2s, opacity 2s;
+
+}
+
+.news-container--hidden{
+    opacity: 0;
+    transform: translateY(6rem);
+}
+
+.news-container .news-specific-container .news-specific-img-container{
+    height: 25vh;
+    width: 30%;
+
+}
+.news-container .news-specific-container .news-specific-img-container img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.news-container .news-specific-container .news-specific-data-container{
+    height: 25vh;
+    width: 50%;
+}
+
+.news-container .news-specific-container .news-specific-data-container h3{
+    font-size: 2rem;
+}
+
+a:hover{
+    color: #FCA311;
+    font-weight: bold;
+}
+
