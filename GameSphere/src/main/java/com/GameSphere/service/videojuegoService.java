@@ -13,4 +13,7 @@ import java.util.List;
  */
 public interface videojuegoService {
     public List<videojuego> getListaVideojuegos();
+    public videojuego getVideojuego(videojuego Videojuego);
+    public void save (videojuego Videojuego);
+    public void delete (videojuego Videojuego);
 }

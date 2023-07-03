@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>GameSphere</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7e36146f79.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script src="js/solid.js"></script>
+        <script src="js/fontawesome.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/Favoritos.css"/>
+    <head th:replace="~{layout/plantilla :: head}">
+    </head>
+    <body>
+        <header>
+            <nav class="nav-container">
+                <!-- Links -->
+                <div class="nav-links">
+                    <ul>
+                        <li><a href="#"><img src="images/logo_nav.png" alt="logo"/></a></li>
+                        <li><a href="#">Tienda</a></li>
+                        <li><a href="#">Noticia</a></li>
+                        <li><a href="#">Favoritos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Icons -->
+                <div class="nav-icons ">
+                    <span class="fa-layers fa-fw fa-5x">
+                        <i class="fa-solid fa-cart-shopping "></i>
+                        <span class="fa-layers-counter fa-2x" style="background:Tomato">2</span>
+                    </span>
+
+
+                </div>
+            </nav>
+        </header>
+
+        <h1>Favoritos</h1>
+        <main>
+            <section class="games-container">
+                <div class="games-container">
+                    <div class="game-card">
+                        <img src="images/marioBackground.jpg" alt="game"/>
+                        <p class="texto1">Mario Bros</p>
+                        <p class="texto2">$ 35</p>
+                        <input type="submit" value="Agregar al carrito" name="game" />
+                        <input class="input2" type="submit" value="           Eliminar           " name="game" />
+                    </div>
+                    <div class="game-card">
+                        <img src="images/horizon.jpg" alt="game"width="455"/>
+                        <p class="texto1">Horizon</p>
+                        <p class="texto2">$ 35</p>
+                        <input class="input" type="submit" value="Agregar al carrito" name="game" />
+                        <input class="input2" type="submit" value="           Eliminar           " name="game" />
+                    </div>
+                    <div class="game-card">
+                        <img src="images/starfield.jpg" alt="game" />
+                        <p class="texto1">Starfield</p>
+                        <p class="texto2">$ 35</p>
+                        <input type="submit" value="Agregar al carrito" name="game" />
+                        <input class="input2" type="submit" value="           Eliminar           " name="game" />
+                    </div>
+                    <div class="game-card">
+                        <img src="images/fifa22.jpg" alt="game"/>
+                        <p class="texto1">FIFA 23</p>
+                        <p class="texto2">$ 35</p>
+                        <input type="submit" value="Agregar al carrito" name="game" />
+                        <input class="input2" type="submit" value="           Eliminar           " name="game" />
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>

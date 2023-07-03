@@ -33,7 +33,7 @@ public class videojuego implements Serializable {
     public videojuego() {
     }
 
-    public videojuego(String nombre_juego, double precio, String desarrollador, String fecha_lanzamiento, String genero, String descripcion_juego, boolean lista_deseo, String imagen_juego) {
+    public videojuego(String nombre_juego, double precio, String desarrollador, String fecha_lanzamiento, String genero, String descripcion_juego, boolean lista_deseo) {
         this.nombre_juego = nombre_juego;
         this.precio = precio;
         this.desarrollador = desarrollador;
@@ -41,6 +41,5 @@ public class videojuego implements Serializable {
         this.genero = genero;
         this.descripcion_juego = descripcion_juego;
         this.lista_deseo = lista_deseo;
-        this.imagen_juego = imagen_juego;
     }
 }

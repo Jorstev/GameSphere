@@ -4,9 +4,9 @@
  */
 package com.GameSphere.controller;
 
-import com.GameSphere.domain.videojuego;
-import com.GameSphere.service.impl.videojuegoServiceImpl;
-import com.GameSphere.service.videojuegoService;
+import com.GameSphere.domain.noticias;
+import com.GameSphere.service.impl.noticiasServiceImpl;
+import com.GameSphere.service.noticiasService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,59 +16,56 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
-
 /**
  *
- * @author JordanStevenChavarri
+ * @author mfsv_
  */
+
 @Controller
 @Slf4j
-
-public class videojuegoController{
-    
+public class noticiasController {
     @Autowired
-    private videojuegoService videojuegoService;
+    private noticiasService NoticiasService;
     //private FirebaseStorageServiceImpl firebaseStorageService;
     
     @GetMapping("/")
     public String getGames(Model model){
-        var listaJuegos = videojuegoService.getListaVideojuegos();
+        var listaJuegos = NoticiasService.getNoticias();
         model.addAttribute("videojuegos", listaJuegos);
         return "index";
     }
     
     @GetMapping("/")
-    public String noticiasNuevo(videojuego Videojuego) {
+    public String noticiasNuevo(noticias Noticias) {
         return "//modifca";
     }
 
     @GetMapping("/guardar")
-    public String noticiasGuardar(videojuego Videojuego, @RequestParam("imagenFile") MultipartFile imagenFile) {
+    public String noticiasGuardar(noticias Noticias, @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
-            videojuegoService.save(Videojuego);
-          /*Noticias.setImagen_videojuego(
+            NoticiasService.save(Noticias);
+           /* Noticias.setImagen_noticia(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
-                            "videojuego",
-                            Videojuego.getId_videojuego()
+                            "noticias",
+                            Noticias.getId_noticia()
                     )
             );*/
         }
-        videojuegoService.save(Videojuego);
+        NoticiasService.save(Noticias);
         return "redirect:/ / ";
     }
 
     @GetMapping("/eliminar/{id_noticias}")
-    public String noticiasEliminar(videojuego Videojuego) {
-        videojuegoService.delete(Videojuego);
+    public String noticiasEliminar(noticias Noticias) {
+        NoticiasService.delete(Noticias);
         return "redirect://";
     }
 
     @GetMapping("/modificar/{id_noticias}")
-    public String noticiasModificar(videojuego Videojuego, Model model) {
-        Videojuego = videojuegoService.getVideojuego(Videojuego);
-        model.addAttribute("videojuego", Videojuego);
+    public String noticiasModificar(noticias Noticias, Model model) {
+        Noticias = NoticiasService.getNoticias(Noticias);
+        model.addAttribute("noticias", Noticias);
         return "redirect://";
     }
-    
 }

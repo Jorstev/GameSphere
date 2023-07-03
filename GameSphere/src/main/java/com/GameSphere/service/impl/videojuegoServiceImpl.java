@@ -10,6 +10,7 @@ import com.GameSphere.service.videojuegoService;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
@@ -26,6 +27,24 @@ public class videojuegoServiceImpl implements videojuegoService {
         var lista = videojuegoDao.findAll();
         
         return lista;
+    }
+
+    @Override
+    @Transactional(readOnly = true)
+    public videojuego getVideojuego(videojuego Videojuego) {
+        return videojuegoDao.findById(Videojuego.getId_juego()).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public void save(videojuego Videojuego) {
+        videojuegoDao.save(Videojuego);
+    }
+
+    @Override
+    @Transactional
+    public void delete(videojuego Videojuego) {
+       videojuegoDao.delete(Videojuego);
     }
     
 }

@@ -1,0 +1,148 @@
+:root{
+    --color-primary: #ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+
+/*Header section*/
+
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    box-sizing: border-box;
+}
+
+.nav-container.sticky{
+    position: fixed;
+    background-color: rgba(19, 33, 60, 0.8);
+    z-index: 3;
+}
+
+.nav-container{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    background-color: #13213C;
+    color:#ffffff;
+}
+.nav-links{
+    width: 30%;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+.nav-links ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links ul li img{
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-links ul li a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
+}
+
+.nav-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
+
+/* Body */
+
+h1{
+color: #13213C;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: relative;
+padding-top: 30px;
+padding-left: 30px;
+padding-bottom: 20px;
+}
+
+.games-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+}
+
+.games-container .game-card{
+    height: 50vh;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    color: #000000;
+    font-size: 1.6rem;
+    box-shadow: rgba(206, 214, 224,1.0) 0px 7px 29px 0px;
+
+    flex-basis: 15%;
+    padding-bottom: 5%;
+}
+
+
+.games-container .game-card img{
+    object-fit: cover;
+    object-position: center;
+    height: 90%;
+    width: 100%;
+}
+
+.games-container .game-card input {
+    background-color: #FCA311;
+    padding: 10px 45px;
+    border-radius: 4px;
+    border: #FCA311;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+.texto1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding-top: 10px;
+}
+
+.texto2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+a:hover{
+    color: #FCA311;
+    font-weight: bold;
+}
