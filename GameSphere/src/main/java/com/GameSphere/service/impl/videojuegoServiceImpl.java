@@ -23,10 +23,9 @@ public class videojuegoServiceImpl implements videojuegoService {
     private videojuegoDao videojuegoDao;
 
     @Override
+    @Transactional (readOnly=true)
     public List<videojuego> getListaVideojuegos() {
-        var lista = videojuegoDao.findAll();
-        
-        return lista;
+        return (List<videojuego>) videojuegoDao.findAll();
     }
 
     @Override

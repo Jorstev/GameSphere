@@ -3,7 +3,8 @@
 Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
 Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
 -->
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
     <head>
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
@@ -42,15 +43,15 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
         </header>
         <main>
             <section class="games-container">
-                <div class="game-card" >
+                <div th:each="videojuego : ${videojuegos}" class="game-card" >
 
-                    <img src="images/marioBackground.jpg" alt="game"/>
+                    <img src=[[${videojuego.imagen_juego}]] alt="game"/>
 
-                    <p class="game-Name">Mario Bros</p>
-                    <p class="game-price">35</p>
+                    <p class="game-Name">[[${videojuego.nombre_juego}]]</p>
+                    <p class="game-price">[[${videojuego.precio}]]</p>
                     <input class="btn-AddCart" type="submit" value="Agregar al carrito" name="game" />
                 </div>
-                <div class="game-card">
+<!--                <div class="game-card">
                     <img src="images/horizon.jpg" alt="game"/>
                     <p class="game-Name">Horizon</p>
                     <p class="game-price">35</p>
@@ -105,13 +106,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                     <p class="game-Name">FIFA 23</p>
                     <p class="game-price">35</p>
                     <input class="btn-AddCart" type="submit" value="Agregar al carrito" name="game" />
-                </div>
+                </div>-->
             </section>
             <section class="payment-container">
 
 
                 <div class="ItemsBuy">
-                    <h1 class="ItemsBuy--title">Módulo de Pago</h1>
                     <div class="items-container">
                         <div class="item">
                             <p>Mario Bros</p>
