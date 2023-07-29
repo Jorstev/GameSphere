@@ -2,7 +2,7 @@
       xmlns:th="http://www.thymeleaf.org">
 
     <head th:replace="~{layout/plantilla :: head}">
-        <link rel="stylesheet" href="css/Noticias.css"/>
+        
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}">
@@ -10,14 +10,14 @@
 
         <h1>Noticias</h1>
 
-        <section th:fragment="lasNoticias" id="lasNoticias">
-            <div  th:if="${Noticias != null }">
-                <div  th:each="noticias : ${Noticias}">
+        <section th:fragment="Noticias" id="noticias">
+            <div  th:if="${noticias != null }">
+                <div  th:each="noticias : ${noticias}">
                     <h3>[[${noticias.titulo_noticia}]]</h3>
                     <p>[[${noticias.fecha_publicacion}]]</p>
                     <br>
                     <p>[[${noticias.descripcion_noticia}]]</p>
-                    <a th:href="@{/noticias/modificar/}+${noticias.id_noticia}">
+                    <a th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
                         <i class="fas fa-pencil"></i> Modificar</a>
                     <a th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
                         <i class="fas fa-trash"></i> Eliminar </a>
