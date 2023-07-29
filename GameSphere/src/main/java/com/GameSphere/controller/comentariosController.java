@@ -4,9 +4,9 @@
  */
 package com.GameSphere.controller;
 
-import com.GameSphere.domain.noticias;
-import com.GameSphere.service.impl.noticiasServiceImpl;
-import com.GameSphere.service.noticiasService;
+import com.GameSphere.domain.comentarios;
+import com.GameSphere.service.impl.comentariosServiceImpl;
+import com.GameSphere.service.comentariosService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,50 +24,50 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 @Slf4j
 @RequestMapping("/noticias")
-public class noticiasController {
+public class comentariosController {
+    /*
     @Autowired
-    private noticiasService NoticiasService;
+    private comentariosService ComentariosService;
     //private FirebaseStorageServiceImpl firebaseStorageService;
     
     @GetMapping("/noticias")
-    public String getNoticias(Model model){
-        var listaNoticias = NoticiasService.getNoticias();
-        model.addAttribute("noticias", listaNoticias);
+    public String getComentarios(Model model){
+        var listaComentarios = ComentariosService.getComentarios();
+        model.addAttribute("comentarios", listaComentarios);
         return "/noticias/noticias";
     }
     
     @GetMapping("/nuevo")
-    public String noticiasNuevo(noticias Noticias) {
+    public String comentariosNuevo(comentarios Comentarios) {
         return "/noticias/modifca";
     }
 
     @GetMapping("/guardar")
-    public String noticiasGuardar(noticias Noticias, @RequestParam("imagenFile") MultipartFile imagenFile) {
+    public String comentariosGuardar(comentarios Comentarios, @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
-            NoticiasService.saveN(Noticias);
-           /*Noticias.setImagen_noticia(
+            ComentariosService.saveC(Comentarios);
+           /*Comentarios.setImagen_noticia(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
                             "noticias",
-                            Noticias.getId_noticia()
+                            Comentarios.getId_comentario()
                     )
-            );*/ 
+            );*/ /*
         }
-        NoticiasService.saveN(Noticias);
+        ComentariosService.saveC(Comentarios);
         return "redirect:/noticias/noticias";
     }
 
-    @GetMapping("/eliminar/{id_noticia}")
-    public String noticiasEliminar(noticias Noticias) {
-        NoticiasService.deleteN(Noticias);
+    @GetMapping("/eliminar/{id_comentario}")
+    public String comentariosEliminar(comentarios Comentarios) {
+        ComentariosService.deleteC(Comentarios);
         return "redirect:/noticias/noticias";
     }
 
-    @GetMapping("/modifica/{id_noticia}")
-    public String noticiasModificar(noticias Noticias, Model model) {
-        Noticias = NoticiasService.getNoticias(Noticias);
-        model.addAttribute("noticias", Noticias);
+    @GetMapping("/modifica/{id_comentario}")
+    public String comentariosModificar(comentarios Comentarios, Model model) {
+        Comentarios = ComentariosService.getComentarios(Comentarios);
+        model.addAttribute("comentarios", Comentarios);
         return "redirect:/noticias/noticias";
-    }
-
+    }*/
 }

@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.GameSphere.dao")
+//@ComponentScan(basePackages = "com.GameSphere.dao")
 
 public class GameSphereApplication {
 

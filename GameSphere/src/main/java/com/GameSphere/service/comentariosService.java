@@ -4,18 +4,17 @@
  */
 package com.GameSphere.service;
 
-import com.GameSphere.domain.noticias;
+import com.GameSphere.domain.comentarios;
 import java.util.List;
 
 /**
  *
  * @author mfsv_
  */
-public interface noticiasService {
-    
-    public List<noticias> getNoticias();
-    public noticias getNoticias(noticias Noticias);
-    public void saveN (noticias Noticias);
-    public void deleteN (noticias Noticias);
+public interface comentariosService {
+    public List<comentarios> getComentarios();
+    public comentarios getComentarios(comentarios Comentarios);
+    public void saveC (comentarios Comentarios);
+    public void deleteC (comentarios Comentarios);
     
 }

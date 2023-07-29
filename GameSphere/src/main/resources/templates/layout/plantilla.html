@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6"
+>
     <head th:fragment="head">
         <title>GameSphere</title>
         <meta charset="UTF-8">
@@ -21,8 +23,8 @@
                     <div class="nav-links">
                         <ul>
                             <li><a href="#"><img src="images/logo_nav.png" alt="logo"/></a></li>
-                            <li><a href="#">Tienda</a></li>
-                            <li><a href="#">Noticia</a></li>
+                            <li><a  th:href="@{/producto/videojuegos}">Tienda</a></li>
+                            <li><a th:href="@{/noticias/noticias}">Noticia</a></li>
                             <li><a href="#">Favoritos</a></li>
                         </ul>
                     </div>

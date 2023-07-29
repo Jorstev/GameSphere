@@ -39,13 +39,14 @@ public class noticiasServiceImpl implements noticiasService {
 
     @Override
     @Transactional
-    public void save(noticias Noticias) {
+    public void saveN (noticias Noticias) {
         NoticiasDao.save(Noticias);
     }
+    
 
     @Override
     @Transactional
-    public void delete(noticias Noticias) {
+    public void deleteN (noticias Noticias) {
         NoticiasDao.delete(Noticias);
     }
     

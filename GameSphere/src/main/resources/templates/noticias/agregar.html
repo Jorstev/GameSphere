@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- 2 Fragmento para agregar categoria, es la ventana modal -->
+        <section th:fragment="agregarNoticias">
+            <div id="agregarNoticias" >
+                <div >
+                    <div >
+                        <h5 >Agregar </h5>
+                        <button type="button" class="btn-close"  aria-label="Close"></button>
+                    </div> 
+                    <form th:action="@{/noticias/guardar}" th:object="${noticias}"
+                          method="POST" class="was-validated" enctype="multipart/form-data">
+                        <div >
+                            <div class="mb-3">
+                                <label for="titulo_noticia">Titulo de la noticia</label>
+                                <input type="text" class="form-control" name="titulo_noticia" required="true"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="fecha_publicacion">Fecha de publicacion</label>
+                                <input type="text" class="form-control" name="fecha_publicacion" required="true"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="descripcion_noticia">Descripcion de la noticia</label>
+                                <input type="text" class="form-control" name="descripcion_noticia" required="true"/>
+                            </div>
+                            <div class="mb-3">
+                                <label for="imagen_noticia">Imagen</label>
+                                <input class="form-control" type="file" name="imagen_noticia" onchange="readURL(this);"/>
+                                <img id="blah" src="#" alt="your image" height="200"/>
+                            </div>
+                        </div>
+                        <div >
+                            <button class="btn btn-primary" type="submit">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

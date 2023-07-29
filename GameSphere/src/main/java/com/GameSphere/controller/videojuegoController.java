@@ -34,7 +34,7 @@ public class VideojuegoController {
         var listaJuegos = videojuegoService.getListaVideojuegos();
         model.addAttribute("videojuegos", listaJuegos);
         return "/producto/videojuegos";
-//    }
+    }
 //    
 //    @GetMapping("/")
 //    public String noticiasNuevo(videojuego Videojuego) {
@@ -70,5 +70,5 @@ public class VideojuegoController {
 //        return "redirect://";
 //    }
 
-    }
+    
 }

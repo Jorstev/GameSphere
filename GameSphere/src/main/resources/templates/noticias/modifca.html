@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section th:fragment="editarNoticias">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <form method="POST"
+                          th:action="@{/noticias/guardar}" 
+                          th:object="${noticias}"
+                          class="was-validated"                          
+                          enctype="multipart/form-data">
+                        <input type="hidden" name="id_noticia" th:field="*{id_noticia}"/>
+                        <input type="hidden" name="imagen_noticia" th:field="*{imagen_noticia}"/>
+                        <section th:replace="~{noticias/modifica :: botonesEditar}"/>
+                        <div id=details>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="card">
+                                            <div class="card-header">
+                                                <h4>Actualizar</h4>
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="mb-3">
+                                                    <label for="titulo_noticia">Titulo de la noticia</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="titulo_noticia" th:field="*{titulo_noticia}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="fecha_publicacion">Fecha de publicacion</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="fecha_publicacion" th:field="*{fecha_publicacion}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="descripcion_noticia">Descripcion de la noticia</label>
+                                                    <input type="text" class="form-control" 
+                                                           name="descripcion_noticia" th:field="*{descripcion_noticia}"
+                                                           required="true">
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label for="imagen_noticia">Imagen</label>
+                                                    <input class="form-control" type="file" name="imagen_noticia"
+                                                           onchange="readURL(this);" />
+                                                    <img id="blah" th:src="@{${noticias.imagen_noticia}}" alt="your image" height="200"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+                        
+        <section th:fragment="botonesEditar">
+            <div class="container py-4 mb-4 bg-light">
+                <div class="row">
+                    <div class="col-md-4 d-grid">
+                        <a th:href="@{/noticias/noticias}" class="btn btn-primary">
+                            <i class="fas fa-arrow-left"></i> Regresar
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">                                
+                        <a th:href="@{/noticias/eliminar/}+${noticias.id_noticia}"
+                           class="btn btn-danger">
+                            <i class="fas fa-trash"></i> Eliminar
+                        </a>
+                    </div>
+                    <div class="col-md-4 d-grid">
+                        <button type="submit" class="btn btn-success">
+                            <i class="fas fa-check"></i> Guardar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

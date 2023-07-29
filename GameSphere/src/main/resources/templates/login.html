@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://wwww.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+    <head th:replace="~{layout/plantilla :: head}">
+        <link rel="stylesheet" type="text/css" href="css/registro.css">
+        <title>TechShop</title>
+        <meta charset="UTF-8"/>
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}"/>
+        <div class="container my-5">
+            <div class="row align-items-center"> 
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-success"><h2>[[#{login.login}]]</h2></div>
+                        <div class="card-body">
+                            <form method="POST" th:action="@{/login}">
+                                <div class="form-group row my-3">
+                                    <label for="username">Nombre de usuario:</label>
+                                    <input type="text" id="username" name="username" required></div>
+                                <div class="form-group row my-3">
+                                   <label for="password">Contraseña:</label>
+                                    <input type="password" id="password" name="password" required> 
+                                </div>
+                                <button class="btn btn-success" type="submit">
+                                        <span class="btn"><i class="fas fa-sign-in-alt"></i>
+                                            [[#{login.login}]]</span></button>
+                                </div>
+                            </form>                            
+                        </div>
+                    </div>
+                    <div th:if="${param.error != null}">
+                        <h3>[[#{error.login}]]</h3>
+                    </div>
+                </div>
+            </div>           
+        </div>
+        <footer th:replace="~{layout/plantilla :: footer}"/>
+    </body>
+</html>
