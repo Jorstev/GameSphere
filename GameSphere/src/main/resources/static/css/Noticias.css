@@ -8,6 +8,64 @@
     box-sizing: inherit;
 }
 
+/*Header section*/
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-primary);
+    box-sizing: border-box;
+}
+
+.nav-container.sticky{
+    position: fixed;
+    background-color: rgba(19, 33, 60, 0.8);
+    z-index: 3;
+}
+
+.nav-container{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    background-color: #13213C;
+    color:#ffffff;
+}
+.nav-links{
+    width: 30%;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+.nav-links ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links ul li img{
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-links ul li a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
+}
+
+.nav-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
 
 /* Body */
 
