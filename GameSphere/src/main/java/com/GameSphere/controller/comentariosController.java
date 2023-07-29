@@ -28,7 +28,6 @@ public class comentariosController {
     /*
     @Autowired
     private comentariosService ComentariosService;
-    //private FirebaseStorageServiceImpl firebaseStorageService;
     
     @GetMapping("/noticias")
     public String getComentarios(Model model){

@@ -2,7 +2,8 @@
       xmlns:th="http://www.thymeleaf.org">
 
     <head th:replace="~{layout/plantilla :: head}">
-        
+    <link rel="stylesheet" href="css/Noticias.css"/>
+    
     </head>
     <body>
         <header th:replace="~{layout/plantilla :: header}">
@@ -10,19 +11,28 @@
 
         <h1>Noticias</h1>
 
-        <section th:fragment="Noticias" id="noticias">
-            <div  th:if="${noticias != null }">
-                <div  th:each="noticias : ${noticias}">
+        <section th:fragment="Noticias" id="noticias" class="news-container">
+            <div  th:if="${noticias != null }"class="news-specific-container">
+                <div  th:each="noticias : ${noticias}" class="news-specific-data-container">
                     <h3>[[${noticias.titulo_noticia}]]</h3>
                     <p>[[${noticias.fecha_publicacion}]]</p>
                     <br>
-                    <p>[[${noticias.descripcion_noticia}]]</p>
-                    <a th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
-                        <i class="fas fa-pencil"></i> Modificar</a>
-                    <a th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
-                        <i class="fas fa-trash"></i> Eliminar </a>
+                        <p>[[${noticias.descripcion_noticia}]]</p>
+                        <a th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
+                            <i class="fas fa-pencil"></i> Modificar</a>
+                        <a th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
+                            <i class="fas fa-trash"></i> Eliminar </a>
                 </div>
             </div>
-        </section>        
+        </section>    
+        <br>
+        <section th:fragment="agregarComentarios">
+            <div id="agregarComentario" >
+                <div class="mb-3">
+                    <label for="descripcion_comentario">Comentarios</label>
+                    <input type="text" class="form-control" name="descripcion_comentario" required="true"/>
+                </div>
+            </div>
+        </section>
 
 </html>
