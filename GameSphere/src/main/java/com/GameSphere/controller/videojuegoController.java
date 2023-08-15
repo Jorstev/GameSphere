@@ -23,7 +23,7 @@ import org.springframework.web.multipart.MultipartFile;
 @Controller
 @Slf4j
 @RequestMapping("/producto")
-public class VideojuegoController {
+public class videojuegoController {
 
     @Autowired
     private videojuegoService videojuegoService;
