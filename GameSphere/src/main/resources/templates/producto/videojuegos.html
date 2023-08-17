@@ -43,8 +43,14 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                     </nav>
                                 </header>
                                 <main>
-                                    <section class="games-container">
-                                        <div th:each="videojuego : ${videojuegos}" class="game-card" >
+                                    <div class="filtro-container">
+                                        <button class="filtro-button" data-filtro="Accion">Acción</button>
+                                        <button class="filtro-button" data-filtro="Aventura">Aventura</button>
+                                        <button class="filtro-button" data-filtro="Deportes">Deportes</button>
+                                        <button class="filtro-button" data-filtro="todos">Todos</button>
+                                    </div>
+                                    <section id="videojuegos-list" class="games-container">
+                                        <div  th:each="videojuego : ${videojuegos}" th:attr="data-genero=${videojuego.genero}" class="game-card" >
 
                                             <img id="blah" th:src="@{${videojuego.imagen_juego}}" alt="game" />
 
@@ -52,7 +58,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <p class="game-Name">[[${videojuego.nombre_juego}]]</p>
                                             <p class="game-price">[[${videojuego.precio}]]</p>
                                             <div>
-                                                
+
                                                 <button class="btn-AddCart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
 
                                                 </button>
@@ -64,6 +70,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                         </div>
 
                                     </section>
+
                                     <section class="payment-container">
 
 
@@ -168,7 +175,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                                 </section>
                                                                 </main>
 
+                                                                <script>
+                                                                    const filtroButtons = document.querySelectorAll('.filtro-button');
+                                                                    const videojuegosList = document.getElementById('videojuegos-list');
 
+                                                                    filtroButtons.forEach(button => {
+                                                                        button.addEventListener('click', () => {
+                                                                            filtroButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                                                                            const filtro = button.getAttribute('data-filtro');
+                                                                            videojuegosList.querySelectorAll('.game-card').forEach(videojuego => {
+                                                                                const genero = videojuego.getAttribute('data-genero');
+                                                                                if (filtro === genero || filtro === 'todos') {
+                                                                                    videojuego.style.display = 'flex';
+                                                                                } else {
+                                                                                    videojuego.style.display = 'none';
+                                                                                }
+                                                                            });
+                                                                        });
+                                                                    });
+                                                                </script>
                                                                 <script th:src="@{/js/Payment.js}">
 
                                                                 </script>
