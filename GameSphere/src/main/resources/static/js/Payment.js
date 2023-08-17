@@ -31,7 +31,7 @@ document.querySelector('.cvv-input').oninput = () => {
 
 
 const AddtoCart = document.querySelectorAll('.btn-AddCart');
-
+console.log(AddtoCart);
 const cartNumber = document.querySelector('#cart-number');
 const shoppingCart = document.querySelector('.fa-cart-shopping');
 const productContainer = document.querySelector('.items-container');
@@ -43,8 +43,9 @@ productContainer.innerHTML = "";
 AddtoCart.forEach((btn) => {
     btn.addEventListener('click', function () {
         cartNumber.textContent++;
-        let parent = btn.parentElement;
-
+        let parentParent = btn.parentElement;
+      
+        let parent = parentParent.parentElement;
         let name = parent.querySelector('.game-Name').textContent;
         let price = parent.querySelector('.game-price').textContent;
         let html = `<div class="item">

@@ -59,13 +59,24 @@ html,body{
     width: 100%;
 }
 
-.games-container .game-card input{
+.games-container .game-card .btn-AddCart{
     background-color: var(--color-secondary);
     padding: 10px 20px;
     border-radius: 4px;
     border: var(--color-secondary);
     outline: none;
     cursor: pointer;
+    color: #ffffff;
+}
+
+.games-container .game-card .btn-Informacion{
+     background-color: var(--color-primary);
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: var(--color-primary);
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
 }
 
 .view-more{

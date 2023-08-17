@@ -36,39 +36,12 @@ public class videojuegoController {
         return "/producto/videojuegos";
     }
 //    
-//    @GetMapping("/")
-//    public String noticiasNuevo(videojuego Videojuego) {
-//        return "//modifca";
-//    }
-//
-//    @GetMapping("/guardar")
-//    public String noticiasGuardar(videojuego Videojuego, @RequestParam("imagenFile") MultipartFile imagenFile) {
-//        if (!imagenFile.isEmpty()) {
-//            videojuegoService.save(Videojuego);
-//          /*Noticias.setImagen_videojuego(
-//                    firebaseStorageService.cargaImagen(
-//                            imagenFile,
-//                            "videojuego",
-//                            Videojuego.getId_videojuego()
-//                    )
-//            );*/
-//        }
-//        videojuegoService.save(Videojuego);
-//        return "redirect:/ / ";
-//    }
-//
-//    @GetMapping("/eliminar/{id_noticias}")
-//    public String noticiasEliminar(videojuego Videojuego) {
-//        videojuegoService.delete(Videojuego);
-//        return "redirect://";
-//    }
-//
-//    @GetMapping("/modificar/{id_noticias}")
-//    public String noticiasModificar(videojuego Videojuego, Model model) {
-//        Videojuego = videojuegoService.getVideojuego(Videojuego);
-//        model.addAttribute("videojuego", Videojuego);
-//        return "redirect://";
-//    }
+    @GetMapping("/videojuegoInfo/{id_juego}")
+    public String ReadVideoJuego(videojuego Videojuego, Model model) {
+        var VideojuegoDetalle = videojuegoService.getVideojuego(Videojuego);
+        model.addAttribute("detalleVideoJuego", VideojuegoDetalle);
+        return "/producto/videojuegoInfo";
+    }
 
     
 }
