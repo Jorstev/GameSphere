@@ -56,7 +56,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
                                             <p class="game-Name">[[${videojuego.nombre_juego}]]</p>
-                                            <p class="game-price">[[${videojuego.precio}]]</p>
+                                            <p class="game-price">$[[${videojuego.precio}]]</p>
                                             <div>
 
                                                 <button class="btn-AddCart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -64,7 +64,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                 </button>
                                                 <a th:href="@{/producto/videojuegoInfo/}+${videojuego.id_juego}"><button class="btn-Informacion" type="submit"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     </button></a>
-
+                                                <a th:href="@{/producto/eliminar/}+${videojuego.id_juego}"><button class="btn-Delete" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
+                                                    </button></a>
                                             </div>
 
                                         </div>
@@ -182,7 +183,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                                     filtroButtons.forEach(button => {
                                                                         button.addEventListener('click', () => {
                                                                             filtroButtons.forEach(btn => btn.classList.remove('active'));
-                button.classList.add('active');
+                                                                            button.classList.add('active');
                                                                             const filtro = button.getAttribute('data-filtro');
                                                                             videojuegosList.querySelectorAll('.game-card').forEach(videojuego => {
                                                                                 const genero = videojuego.getAttribute('data-genero');

@@ -35,6 +35,12 @@ public class videojuegoController {
         model.addAttribute("videojuegos", listaJuegos);
         return "/producto/videojuegos";
     }
+    
+    @GetMapping("/eliminar/{id_juego}")
+    public String videojuegoEliminar(videojuego Videojuego) {
+        videojuegoService.delete(Videojuego);
+        return "redirect:/producto/videojuegos";
+    }
 //    
     @GetMapping("/videojuegoInfo/{id_juego}")
     public String ReadVideoJuego(videojuego Videojuego, Model model) {
