@@ -28,7 +28,7 @@ public class comentariosServiceImpl implements comentariosService {
     @Override
     @Transactional(readOnly = true)
     public comentarios getComentarios (comentarios Comentarios) {
-        return ComentariosDao.findById(Comentarios.getId_noticia()).orElse(null);
+        return ComentariosDao.findById(Comentarios.getId_comentario()).orElse(null);
     }
 
     @Override

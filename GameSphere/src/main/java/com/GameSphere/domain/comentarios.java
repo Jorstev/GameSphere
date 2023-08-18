@@ -25,8 +25,12 @@ public class comentarios implements Serializable{
     private Long id_comentario;
     private String nombre_comentario;
     private String descripcion_comentario;
-    
-    @Column(name = "id_noticia")
-    private Long id_noticia;
-    
+
+    public comentarios() {
+    }
+
+    public comentarios( String nombre_comentario, String descripcion_comentario) {
+        this.nombre_comentario = nombre_comentario;
+        this.descripcion_comentario = descripcion_comentario;
+    }
 }

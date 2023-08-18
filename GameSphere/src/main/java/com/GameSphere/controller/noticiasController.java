@@ -38,7 +38,7 @@ public class noticiasController {
     
     @GetMapping("/nuevo")
     public String noticiasNuevo(noticias Noticias) {
-        return "/noticias/modifca";
+        return "/noticias/agregar";
     }
 
     @GetMapping("/guardar")
@@ -62,12 +62,17 @@ public class noticiasController {
         NoticiasService.deleteN(Noticias);
         return "redirect:/noticias/noticias";
     }
-
-    @GetMapping("/modifica/{id_noticia}")
+    @GetMapping("/modificar/{id_noticia}")
     public String noticiasModificar(noticias Noticias, Model model) {
         Noticias = NoticiasService.getNoticias(Noticias);
         model.addAttribute("noticias", Noticias);
-        return "redirect:/noticias/noticias";
+        return "/noticias/modifica";
     }
-
+    
+    @GetMapping("/noticiaView/{id_noticia}")
+    public String viewNoticia(noticias Noticias, Model model) {
+        var noticiaEspecifica = NoticiasService.getNoticias(Noticias);
+        model.addAttribute("noticiaEspecifica", noticiaEspecifica);
+        return "/noticias/noticiaView";
+    }
 }

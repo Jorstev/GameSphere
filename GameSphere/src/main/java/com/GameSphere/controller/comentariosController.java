@@ -17,28 +17,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
- *
+ * 
  * @author mfsv_
  */
 
 @Controller
 @Slf4j
-@RequestMapping("/noticias")
+@RequestMapping("/comentarios")
 public class comentariosController {
-    /*
+    
     @Autowired
     private comentariosService ComentariosService;
     
-    @GetMapping("/noticias")
+    @GetMapping("/comentarios")
     public String getComentarios(Model model){
         var listaComentarios = ComentariosService.getComentarios();
         model.addAttribute("comentarios", listaComentarios);
-        return "/noticias/noticias";
+        return "/comentarios/comentarios";
     }
     
     @GetMapping("/nuevo")
     public String comentariosNuevo(comentarios Comentarios) {
-        return "/noticias/modifca";
+        return "/comentarios/agregar";
     }
 
     @GetMapping("/guardar")
@@ -48,25 +48,25 @@ public class comentariosController {
            /*Comentarios.setImagen_noticia(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
-                            "noticias",
+                            "comentarios",
                             Comentarios.getId_comentario()
                     )
-            );*/ /*
+            );*/ 
         }
         ComentariosService.saveC(Comentarios);
-        return "redirect:/noticias/noticias";
+        return "redirect:/comentarios/comentarios";
     }
 
     @GetMapping("/eliminar/{id_comentario}")
     public String comentariosEliminar(comentarios Comentarios) {
         ComentariosService.deleteC(Comentarios);
-        return "redirect:/noticias/noticias";
+        return "redirect:/comentarios/comentarios";
     }
 
     @GetMapping("/modifica/{id_comentario}")
     public String comentariosModificar(comentarios Comentarios, Model model) {
         Comentarios = ComentariosService.getComentarios(Comentarios);
         model.addAttribute("comentarios", Comentarios);
-        return "redirect:/noticias/noticias";
-    }*/
+        return "/comentarios/modifica";
+    }
 }

@@ -34,11 +34,13 @@ public class noticias implements Serializable{
     private String imagen_noticia;
 
     public noticias() {
+        
     }
 
-    public noticias(String titulo_noticia, String fecha_publicacion, String descripcion_noticia) {
+    public noticias(String titulo_noticia, String fecha_publicacion, String descripcion_noticia, String ruta_imagen) {
         this.titulo_noticia = titulo_noticia;
         this.fecha_publicacion = fecha_publicacion;
         this.descripcion_noticia = descripcion_noticia;
+        this.imagen_noticia = ruta_imagen;
     }   
 }

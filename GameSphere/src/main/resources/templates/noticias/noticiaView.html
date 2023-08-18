@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 
@@ -12,7 +17,7 @@
         <script th:src="@{/js/fontawesome.js}"></script>
   
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-        <link th:href="@{/css/Noticias.css}" rel="stylesheet" type="text/css"/>
+        <link th:href="@{/css/NoticiasView.css}" rel="stylesheet" type="text/css"/>
     </head>
     
     <body>
@@ -37,40 +42,33 @@
                     </div>
                 </nav>
             </header>
-
-        <h1>Noticias</h1>
         
-        <div Class="add-button">
-            <a class="input-add"   th:href="@{/noticias/agregar}">
-                <i class="fa-solid fa-plus"></i> Agregar 
-            </a>
-        </div>
+        <h1 class="text">Detalle de la noticia</h1>
         
-        <section th:fragment="Noticias" id="noticias" class="news-container">
-            <div  th:if="${noticias != null }"class="news-specific-container">
-                <div  th:each="noticias : ${noticias}" class="news-specific-data-container">
-                    
-                        <img class="news-specific-img-container2" id="xd" th:src="@{${noticias.imagen_noticia}}" alt="game" />
-                   
-                    <h3>[[${noticias.titulo_noticia}]]</h3>
-                    <p>[[${noticias.fecha_publicacion}]]</p>
-                    <br>
-                        <p>[[${noticias.descripcion_noticia}]]</p>
-                        <div class="button-notices">
-                            
-                        <a class="input" th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
-                            <i class="fas fa-pencil"></i> Modificar</a>
-                        <a class="input"  th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
-                            <i class="fas fa-trash"></i> Eliminar </a>
-                            
-                            <br><br>
-                        <a class="input"  th:href="@{/noticias/noticiaView/}+${noticias.id_noticia}">
-                            <i class="fas fa-info-circle"></i> Detalle </a>
-                        </div>
-                        
+        <main  th:each="noticias : ${noticiaEspecifica}" class="news-container" >
+                <div >
+                    <img class="image-container" id="blah" th:src="@{${noticias.imagen_noticia}}" alt="game" />
                 </div>
-            </div>
-        </section>    
-        <br>
-
+                <div  class="news-specific-data-container">
+                    <h1>[[${noticias.titulo_noticia}]]</h3>
+                    <hr color="#dcdde1" style="height:1px">
+                     
+                    <div class="title-notice">
+                    <p class="noticia">Fecha publicacion:  </p>
+                    <p class="info">[[${noticias.fecha_publicacion}]]</p>
+                    </div>
+                    <hr color="#dcdde1" style="height:1px">
+                    <br>
+                    <div class="title-notice">
+                        <p class="noticia" >Noticia:</p>
+                        <p class="info">[[${noticias.descripcion_noticia}]]</p>
+                    </div>
+                    <div class="button-notices">
+                        <a class="input-add"  th:href="@{/noticias/noticias}">
+                            Regresar a Noticias</a>
+                    </div>
+                </div>
+           
+        </main>
+       
 </html>
