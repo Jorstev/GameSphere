@@ -23,7 +23,7 @@ public class videojuego implements Serializable {
     @Column(name = "id_juego")
     private Long id_juego;
     private String nombre_juego;
-    private double precio;
+    private String precio;
     private String desarrollador;
     private String fecha_lanzamiento;
     private String genero;
@@ -34,7 +34,7 @@ public class videojuego implements Serializable {
     public videojuego() {
     }
 
-    public videojuego(String nombre_juego, double precio, String desarrollador, String fecha_lanzamiento, String genero, String descripcion_juego, boolean lista_deseo, String ruta_imagen) {
+    public videojuego(String nombre_juego, String precio, String desarrollador, String fecha_lanzamiento, String genero, String descripcion_juego, boolean lista_deseo, String ruta_imagen) {
         this.nombre_juego = nombre_juego;
         this.precio = precio;
         this.desarrollador = desarrollador;
@@ -42,6 +42,7 @@ public class videojuego implements Serializable {
         this.genero = genero;
         this.descripcion_juego = descripcion_juego;
         this.lista_deseo = lista_deseo;
+        this.imagen_juego = ruta_imagen;
     }
 
   

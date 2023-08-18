@@ -4,12 +4,14 @@
  */
 package com.GameSphere.service;
 
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 /**
  *
  * @author JordanStevenChavarri
  */
+@Service
 public interface FirebaseStorageService {
     public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id);
     
@@ -19,5 +21,5 @@ public interface FirebaseStorageService {
     
     final String rutaJsonFile = "firebase";
     
-    final String archivoJsonFile = "gamesphere-3f926-firebase-adminsdk-4ngy6-fa19cd3c7b";
+    final String archivoJsonFile = "gamesphere-3f926-firebase-adminsdk-4ngy6-fa19cd3c7b.json";
 }
