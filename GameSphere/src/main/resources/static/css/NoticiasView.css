@@ -141,11 +141,10 @@ padding-bottom: 20px;
 .news-container .news-specific-container .news-specific-img-container2{
     width: 100%;
 }
-.news-container .news-specific-container .news-specific-img-container img{
+.news-container img{
     object-fit: cover;
-    object-position: center;
-    height: 100%;
-    width: 100%;
+    object-position: bottom;
+
 }
 
 .news-container .news-specific-container .news-specific-data-container{
