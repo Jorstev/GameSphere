@@ -49,7 +49,6 @@ html,body{
     flex-basis: 15%;
 
     margin: 2%;
-
 }
 .games-container .agregar-container{
     height: 40vh;
@@ -80,6 +79,9 @@ html,body{
     height: 70%;
     width: 100%;
 }
+.btn-container{
+    margin-bottom: 3px;
+}
 
 
 .btn{
@@ -88,6 +90,13 @@ html,body{
     outline: none;
     cursor: pointer;
     color: #ffffff;
+    box-shadow: rgba(206, 214, 224,1.0) 0px 7px 29px 0px;
+
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
 }
 
 .btn-AddCart{
@@ -115,6 +124,12 @@ html,body{
     margin-right: 2%;
 
 }
+
+.filtro-button:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
 .filtro-button.active {
     background-color: #3498db;
     color: white;
@@ -156,15 +171,33 @@ html,body{
     }
 
 
-
 }
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1500px){
 
     .games-container .game-card{
         font-size: 1.4rem;
     }
     .ItemsBuy .items-container .btn-remove{
         padding: 8px 14px;
+    }
+
+    .games-container .game-card{
+        height: 55vh;
+        flex-basis: 18%;
+    }
+
+
+}
+@media screen and (max-width: 1280px){
+
+
+    .games-container .game-card{
+        height: 50vh;
+        flex-basis: 18%;
+    }
+    .btn{
+        padding: 8px 16px;
+
     }
 
 

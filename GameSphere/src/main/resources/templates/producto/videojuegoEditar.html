@@ -76,16 +76,19 @@
                                                                                         <input type="text" name="descripcion_juego" th:field="*{descripcion_juego}">
                                                                                             <hr color="#dcdde1" style="height:1px">
 
-                                                                                                <label for="imagen">Cargar Imagen</label>
+                                                                                                <label class="text" for="imagen">Cargar Imagen</label>
                                                                                                 <input type="file" name="imagenFile"/>
+                                                                                                <div>
+                                                                                                    <button class="btn btn-AddCart" type="submit">Guardar
+                                                                                                    </button>
+                                                                                                    <a th:href="@{/producto/videojuegos}"><button class="btn btn-Delete" type="button">Cancelar
+                                                                                                        </button></a>
+                                                                                                </div>
 
-                                                                                                <button class="btn-AddCart" type="submit">Guardar
-                                                                                                </button>
                                                                                                 </form>
 
                                                                                                 </div>
 
                                                                                                 </main>
-                                                                                                <script th:src="@{/js/solid.js}"></script>
                                                                                                 </body>
                                                                                                 </html>

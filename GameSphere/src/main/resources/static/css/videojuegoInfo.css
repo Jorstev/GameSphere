@@ -66,7 +66,7 @@ html,body{
 .main-informacion{
     display: flex;
     justify-content: center;
-    
+
 
 }
 .image-container{
@@ -93,7 +93,7 @@ html,body{
     width: 50%;
     display: flex;
     flex-direction: column;
-font-size: 1.6rem;
+    font-size: 1.6rem;
     justify-content: space-around;
     padding: 0 5vh 0 5vh;
 }
@@ -108,7 +108,34 @@ font-size: 1.6rem;
     width: 150px;
 }
 
+.btn{
+    padding: 10px 20px;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.btn-AddCart{
+    background-color: #10ac84;
+    border: #10ac84;
+}
+
+.btn-Edit{
+    background-color: var(--color-secondary);
+    border: var(--color-secondary);
+}
+
+.btn-Delete{
+    background-color: #eb4d4b;
+    border: #eb4d4b;
+}
+
 .main-informacion .text{
     color: #6f6f6f;
     font-size: 1.6rem;
+}
+
+.main-informacion .info-container input{
+    padding: 1vh 0;
 }
