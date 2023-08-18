@@ -37,49 +37,55 @@
                                         </div>
                                     </nav>
                                 </header>
-                                <main th:each="videojuego : ${detalleVideoJuego}" class="main-informacion">
-
-                                    <div class="image-container">
-                                        <h1 class="text">Detalles del video juego</h1>
-
-                                        <img id="blah" th:src="@{${videojuego.imagen_juego}}" alt="game" />
-                                    </div>
-
+                                <main th:each="videojuego : ${detalleVideoJuego}" >
                                     <form class="main-informacion" th:action="@{/producto/guardar}" th:object="${videojuego}" method="POST" enctype="multipart/form-data">
+
+
+
+
+
                                         <input type="hidden" name="id_juego" th:field="*{id_juego}"/>
 
                                         <div class="info-container">
-                                            <label class="text" for="desarrollador">Desarrollador:</label>
-                                            <input type="text" name="desarrollador" th:field="*{desarrollador}">
+                                            <h1 class="text">Editar video juego</h1>
+                                            <hr color="#dcdde1" style="height:1px">
+                                                <label class="text" for="nombre_juego">Nombre de Videojuego:</label>
+                                                <input type="text" name="nombre_juego" th:field="*{nombre_juego}">
 
-                                                <hr color="#dcdde1" style="height:1px">
-                                                    <label class="text" for="fecha_lanzamiento">Fecha lanzamiento:</label>
-                                                    <input type="date" name="fecha_lanzamiento" th:field="*{fecha_lanzamiento}">
+                                                    <hr color="#dcdde1" style="height:1px">
+                                                        <label class="text" for="desarrollador">Desarrollador:</label>
+                                                        <input type="text" name="desarrollador" th:field="*{desarrollador}">
 
-                                                        <hr color="#dcdde1" style="height:1px">
-                                                            <label class="text" for="genero">Género:</label>
-                                                            <input type="text" name="genero" th:field="*{genero}">
-                                                                <hr color="#dcdde1" style="height:1px">
-                                                                    
-                                                                    <label class="text" for="precio:">precio:</label>
-                                                                    <input type="text" name="precio:" th:field="*{precio}">
-                                                                        <hr color="#dcdde1" style="height:1px">
+                                                            <hr color="#dcdde1" style="height:1px">
+                                                                <label class="text" for="fecha_lanzamiento">Fecha lanzamiento:</label>
+                                                                <input type="date" name="fecha_lanzamiento" th:field="*{fecha_lanzamiento}">
 
+                                                                    <hr color="#dcdde1" style="height:1px">
+                                                                        <label class="text" for="genero">Género:</label>
+                                                                        <input type="text" name="genero" th:field="*{genero}">
+                                                                            <hr color="#dcdde1" style="height:1px">
 
-
-
-                                                                            <label class="text" for="descripcion_juego">Descripción detallada:</label>
-                                                                            <input type="text" name="descripcion_juego" th:field="*{descripcion_juego}">
-                                                                                <hr color="#dcdde1" style="height:1px">
-
+                                                                                <label class="text" for="precio:">precio:</label>
+                                                                                <input type="text" name="precio:" th:field="*{precio}">
+                                                                                    <hr color="#dcdde1" style="height:1px">
 
 
-                                                                                    <button class="btn-AddCart" type="submit">Guardar
-                                                                                    </button>
-                                                                                    </form>
 
-                                                                                    </div>
 
-                                                                                    </main>
-                                                                                    </body>
-                                                                                    </html>
+                                                                                        <label class="text" for="descripcion_juego">Descripción detallada:</label>
+                                                                                        <input type="text" name="descripcion_juego" th:field="*{descripcion_juego}">
+                                                                                            <hr color="#dcdde1" style="height:1px">
+
+                                                                                                <label for="imagen">Cargar Imagen</label>
+                                                                                                <input type="file" name="imagenFile"/>
+
+                                                                                                <button class="btn-AddCart" type="submit">Guardar
+                                                                                                </button>
+                                                                                                </form>
+
+                                                                                                </div>
+
+                                                                                                </main>
+                                                                                                <script th:src="@{/js/solid.js}"></script>
+                                                                                                </body>
+                                                                                                </html>
