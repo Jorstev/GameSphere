@@ -51,6 +51,28 @@ html,body{
     margin: 2%;
 
 }
+.games-container .agregar-container{
+    height: 40vh;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 15%;
+    box-shadow: rgba(206, 214, 224,1.0) 0px 7px 29px 0px;
+    color: #6F6F6F;
+    margin: 2%;
+    flex-direction: column;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.games-container .agregar-container:hover{
+    color: var(--color-secondary);
+}
+
+.games-container .txt-agregar{
+    font-size: 1.6rem;
+}
 
 .games-container .game-card img{
     object-fit: cover;
@@ -59,23 +81,28 @@ html,body{
     width: 100%;
 }
 
-.btn-AddCart{
-    background-color: var(--color-secondary);
+
+.btn{
     padding: 10px 20px;
     border-radius: 4px;
-    border: var(--color-secondary);
     outline: none;
     cursor: pointer;
     color: #ffffff;
 }
+
+.btn-AddCart{
+    background-color: #10ac84;
+    border: #10ac84;
+}
+
+.btn-Edit{
+    background-color: var(--color-secondary);
+    border: var(--color-secondary);
+}
+
 .btn-Delete{
     background-color: #eb4d4b;
-    padding: 10px 20px;
-    border-radius: 4px;
     border: #eb4d4b;
-    outline: none;
-    cursor: pointer;
-    color: #ffffff;
 }
 .filtro-button{
     background-color: var(--color-secondary);
@@ -86,7 +113,7 @@ html,body{
     cursor: pointer;
     color: #ffffff;
     margin-right: 2%;
-    
+
 }
 .filtro-button.active {
     background-color: #3498db;
@@ -100,13 +127,8 @@ html,body{
 }
 
 .games-container .game-card .btn-Informacion{
-    background-color: var(--color-primary);
-    padding: 10px 20px;
-    border-radius: 4px;
-    border: var(--color-primary);
-    outline: none;
-    cursor: pointer;
-    color: #ffffff;
+    background-color: #0abde3;
+    border: #0abde3;
 }
 
 .view-more{

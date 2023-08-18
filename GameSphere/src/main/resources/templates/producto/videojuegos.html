@@ -59,16 +59,26 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                             <p class="game-price">$[[${videojuego.precio}]]</p>
                                             <div>
 
-                                                <button class="btn-AddCart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                                <button class="btn btn-AddCart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
 
                                                 </button>
-                                                <a th:href="@{/producto/videojuegoInfo/}+${videojuego.id_juego}"><button class="btn-Informacion" type="submit"><i class="fa fa-info-circle" aria-hidden="true"></i>
+                                                <a th:href="@{/producto/videojuegoInfo/}+${videojuego.id_juego}"><button class="btn btn-Informacion" type="submit"><i class="fa fa-info-circle" aria-hidden="true"></i>
                                                     </button></a>
-                                                <a th:href="@{/producto/eliminar/}+${videojuego.id_juego}"><button class="btn-Delete" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
+                                                <a th:href="@{/producto/videojuegoEditar/}+${videojuego.id_juego}"><button class="btn btn-Edit" type="submit"><i class="fa fa-pencil-square" aria-hidden="true"></i>
+
+                                                    </button></a>
+                                                <a th:href="@{/producto/eliminar/}+${videojuego.id_juego}"><button class="btn btn-Delete" type="submit"><i class="fa fa-trash" aria-hidden="true"></i>
                                                     </button></a>
                                             </div>
 
                                         </div>
+
+
+                                        </div>
+                                        <a class="agregar-container" th:href="@{/producto/videojuegoAgregar}">
+                                            <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
+                                            <p class="txt-agregar">Agregar</p>
+                                        </a>
 
                                     </section>
 

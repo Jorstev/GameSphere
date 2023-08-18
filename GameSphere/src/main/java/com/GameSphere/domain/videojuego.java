@@ -37,11 +37,12 @@ public class videojuego implements Serializable {
     public videojuego(String nombre_juego, double precio, String desarrollador, String fecha_lanzamiento, String genero, String descripcion_juego, boolean lista_deseo, String ruta_imagen) {
         this.nombre_juego = nombre_juego;
         this.precio = precio;
-        this.imagen_juego = ruta_imagen;
-//        this.desarrollador = desarrollador;
-//        this.fecha_lanzamiento = fecha_lanzamiento;
-//        this.genero = genero;
-//        this.descripcion_juego = descripcion_juego;
-//        this.lista_deseo = lista_deseo;
+        this.desarrollador = desarrollador;
+        this.fecha_lanzamiento = fecha_lanzamiento;
+        this.genero = genero;
+        this.descripcion_juego = descripcion_juego;
+        this.lista_deseo = lista_deseo;
     }
+
+  
 }

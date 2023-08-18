@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Información</title>
+        <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <script src="https://kit.fontawesome.com/7e36146f79.js" crossorigin="anonymous"></script>
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <script th:src="@{/js/solid.js}"></script>
+                        <script th:src="@{/js/fontawesome.js}"></script>
+                        <script th:src="@{/js/rutinas.js}"></script>
+                        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+                            <link th:href="@{/css/videojuegoInfo.css}" rel="stylesheet" type="text/css"/>
+                            </head>
+                            <body>
+                                <header>
+                                    <nav class="nav-container">
+                                        <!-- Links -->
+                                        <div class="nav-links">
+                                            <ul>
+                                                <li><img th:src="@{/images/logo_nav.png}" alt="logo"/></li>
+
+                                                <li><a href="#">Tienda</a></li>
+                                                <li><a href="#">Noticia</a></li>
+                                                <li><a href="#">Favoritos</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Icons -->
+                                        <div class="nav-icons ">
+                                            <span class="fa-layers fa-fw fa-5x">
+                                                <i class="fa-solid fa-cart-shopping "></i>
+                                                <span id="cart-number" class="fa-layers-counter fa-2x" style="background:Tomato">0</span>
+                                            </span>
+                                        </div>
+                                    </nav>
+                                </header>
+                                <main>
+                                    <form class="main-informacion" th:action="@{/producto/guardar}" th:object="${videojuego}" method="POST" enctype="multipart/form-data">
+
+                                        <div class="info-container">
+                                            <label class="text" for="nombre_juego">Nombre del Juego:</label>
+                                            <input type="text" name="nombre_juego" required="true"/>
+                                                <hr color="#dcdde1" style="height:1px">
+                                                    
+                                                    <label class="text" for="precio:">precio:</label>
+                                                    <input type="text" name="precio:" required="true"/>
+                                                        <hr color="#dcdde1" style="height:1px">
+                                                            
+                                                            <label class="text" for="desarrollador">Desarrollador:</label>
+                                                            <input type="text" name="desarrollador" required="true"/>
+                                                                <hr color="#dcdde1" style="height:1px">
+                                                                    
+                                                                    <label class="text" for="fecha_lanzamiento">Fecha lanzamiento:</label>
+                                                                    <input type="date" name="fecha_lanzamiento" required="true"/>
+                                                                        <hr color="#dcdde1" style="height:1px">
+                                                                            
+                                                                            <label class="text" for="genero">Género:</label>
+                                                                            <input type="text" name="genero" required="true"/>
+                                                                                <hr color="#dcdde1" style="height:1px">
+
+                                                                                    <label class="text" for="descripcion_juego">Descripción detallada:</label>
+                                                                                    <input type="text" name="descripcion_juego" required="true"/>
+                                                                                        <hr color="#dcdde1" style="height:1px">
+                                                                                            
+                                                                                            <label class="text" for="lista_deseo">Lista Deseo:</label>
+                                                                                            <input type="text" name="lista_deseo" required="true"/>
+                                                                                                <hr color="#dcdde1" style="height:1px">
+
+                                                                                                    <div class="image-container">
+                                                                                                        <h1 class="text">Agregar del video juego</h1>
+                                                                                                        <label for="imagen">Cargar Imagen</label>
+                                                                                                        <input type="file" name="imagenFile" onchange="readURL(this);"/>
+                                                                                                            <img id="blah" src="#" alt="game" height="200"/>
+                                                                                                    </div>
+                                                                                                    <button class="btn-AddCart" type="submit">Guardar
+                                                                                                    </button>
+                                                                                                    </form>
+
+
+                                                                                                    </div>
+
+                                                                                                    </main>
+                                                                                                    </body>
+                                                                                                    </html>
