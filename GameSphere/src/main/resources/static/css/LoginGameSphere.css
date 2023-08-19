@@ -1,0 +1,100 @@
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.background-container{
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.background-container img{
+    object-fit: cover;
+    object-position: center;
+    height: 100vh;
+    width: 100%;
+    filter: grayscale(100%);
+}
+
+.login-container {
+    width: 45%;
+    height: 70%;
+
+    display: flex;
+    z-index: 2;
+    position: absolute;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login-container .login-visual {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    display: flex;
+}
+.login-container .login-visual img {
+    background-color: #13213C;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+    
+
+}
+.login-container .login-form {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(245, 243, 244, 0.8);
+}
+
+.login-container .login-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container .login-form form {
+    display: inherit;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 80%;
+    width: 70%;
+    font-size: 1.6rem;
+}
+
+.login-container .login-form .login-form-input {
+    padding: 5px 20px;
+    border: rgba(223, 228, 234, 0.5);
+    outline: none;
+}
+
+.login-container .login-form .login-form-btn {
+    padding: 5px 20px;
+    background-color: #FCA311;
+    color: white;
+    border: #FCA311;
+    border-radius: 3px;
+    cursor: pointer;
+}
