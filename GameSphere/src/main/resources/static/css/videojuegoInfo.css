@@ -35,6 +35,19 @@ html,body{
     font-size: 1.6rem;
 
 }
+.input {
+    background-color: #13213C;
+    padding: 5px 35px;
+    border-radius: 4px;
+    border: #FCA311;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 1%;
+    color: #ffffff;
+    text-decoration: none;
+}
 .nav-links ul{
     display: flex;
     height: 100%;
