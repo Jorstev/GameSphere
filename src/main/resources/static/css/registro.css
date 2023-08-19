@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.half {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.blue {
+    background-color: #13213C;
+}
+
+.white {
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.half.white {
+    max-width: 48%;
+}
+
+.white h1 {
+    text-align: center;
+    white-space: nowrap; 
+    font-size: 35px !important; 
+    font-family: "Poppins-Bold", Helvetica !important;
+    margin-left: 0px;
+    margin-top: -450px;
+    color: #13213c;
+}
+
+.white h1 {
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="password"] {
+    background-color: #6f6f6f;
+    border: none;
+    border-radius: 18px;
+    color: #FFFFFF;
+    height: 25px;
+    width: 450px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    background-color: #fca311;
+    border: none;
+    color: #13213c;
+    padding: 12px 20px;
+    border-radius: 18px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: -20px;
+    
+}
+
+.imagecontrol{
+    position: absolute;
+    left: -95px; 
+    top: 150px; 
+    height: 600px;
+    background-color: transparent;
+}
+.image-gamesphere-logo{
+    position: absolute;
+    left: 75px; 
+    top: 15px; 
+    height: 300px;
+    background-color: transparent;
+}

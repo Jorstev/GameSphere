@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head th:replace="~{layout/plantilla :: head}">
+
+    </head>
+    <body>
+        <header th:replace="~{layout/plantilla :: header}">
+        </header>
+        <main>
+            <!--Sección de título y videojuegos-->
+            <div class="introduction-container">
+                <!--sección de titulo-->
+                <div class="phrase-container">
+                    <p class="phare-style">Tu pasión por el <span class="gaming-style">gaming</span> tiene un nuevo hogar</p>
+                    <img src="images/controls.png" alt="controls"/>
+                </div>
+
+                <!--sección de videojuegos-->
+                <div class="games-container">
+
+                    <div class="game-card" >
+
+                        <img src="images/marioBackground.jpg" alt="game"/>
+
+                        <p>Mario Bros</p>
+                        <p>$ 30</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/horizon.jpg" alt="game"/>
+                        <p>Horizon</p>
+                        <p>$ 35</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/starfield.jpg" alt="game"/>
+                        <p>Starfield</p>
+                        <p>$ 35</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="images/fifa22.jpg" alt="game"/>
+                        <p>FIFA 23</p>
+                        <p>$ 35</p>
+                    </div>
+                    <div class="view-more"><a th:href="@{/producto/videojuegos}">Ver más &rightarrow;</a></div>
+
+                </div>
+            </div>
+            <!--sección de noticias-->
+            <div class="news-container">
+                <div class="news-specific-container">
+                    <div class="news-specific-img-container">
+                        <img src="images/news1.jpg" alt="news"/>
+                    </div>
+                    <div class="news-specific-data-container">
+                        <h3>Titulo noticia</h3>
+                        <p>Fecha publicación</p>
+                        <br>
+                            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit tristique nunc, nisi sodales dapibus semper ridiculus neque pretium quisque egestas, turpis nec lobortis aptent nisl vehicula nascetur vulputate. Feugiat nostra lobortis massa imperdiet rhoncus vitae sem tincidunt suscipit vestibulum hendrerit, taciti sapien augue molestie praesent sed egestas eleifend luctus.</p>
+                    </div>
+
+                </div>
+                <hr color="#FCA311">
+                    <div class="news-specific-container">
+                        <div class="news-specific-img-container">
+                            <img src="images/news2.jpg" alt="news"/>
+                        </div>
+                        <div class="news-specific-data-container">
+                            <h3>Titulo noticia</h3>
+                            <p>Fecha publicación</p>
+                            <br>
+                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit tristique nunc, nisi sodales dapibus semper ridiculus neque pretium quisque egestas, turpis nec lobortis aptent nisl vehicula nascetur vulputate. Feugiat nostra lobortis massa imperdiet rhoncus vitae sem tincidunt suscipit vestibulum hendrerit, taciti sapien augue molestie praesent sed egestas eleifend luctus.</p>
+                        </div>
+
+                    </div>
+                    <hr color="#FCA311">
+                        <div class="news-specific-container">
+                            <div class="news-specific-img-container">
+                                <img src="images/news3.jpg" alt="news"/>
+                            </div>
+                            <div class="news-specific-data-container">
+                                <h3>Titulo noticia</h3>
+                                <p>Fecha publicación</p>
+                                <br>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit tristique nunc, nisi sodales dapibus semper ridiculus neque pretium quisque egestas, turpis nec lobortis aptent nisl vehicula nascetur vulputate. Feugiat nostra lobortis massa imperdiet rhoncus vitae sem tincidunt suscipit vestibulum hendrerit, taciti sapien augue molestie praesent sed egestas eleifend luctus.</p>
+                            </div>
+
+                        </div>
+                        <div class="view-more"><a href="#">Ver más &rightarrow;</a></div>
+
+                        </div>
+                        </main>
+
+                        <script src="js/LandingPageUser.js"></script>
+                        <script type="module" src="js/AddToCart.js"></script>
+                        </body>
+                        </html>

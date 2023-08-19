@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head> 
+        <title>GameSphere</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7e36146f79.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script th:src="@{/js/solid.js}"></script>
+        <script th:src="@{/js/fontawesome.js}"></script>
+  
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link th:href="@{/css/Comentarios.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <header th:fragment="header">
+                <nav class="nav-container">
+                    <!-- Links -->
+                    <div class="nav-links">
+                        <ul>
+                            <li><a  th:href="@{/}"><img th:src="@{/images/logo_nav.png}" alt="logo"/></li>
+                            <li><a  th:href="@{/producto/videojuegos}">Tienda</a></li>
+                            <li><a th:href="@{/noticias/noticias}">Noticias</a></li>
+                            <li><a th:href="@{/comentarios/comentarios}">Comunidad</a></li>
+                        </ul>
+                    </div>
+                    <!-- Icons -->
+                    <div class="nav-icons ">
+                        <span class="fa-layers fa-fw fa-5x">
+                            <i class="fa-solid fa-cart-shopping "></i>
+                            <span id="cart-number" class="fa-layers-counter fa-2x" style="background:Tomato">0</span>
+                        </span>
+
+                    </div>
+                </nav>
+            </header>
+
+        <h1>Foro de la comunidad</h1>
+        
+        <div Class="add-button">
+            <a class="input-add" th:href="@{/comentarios/agregar}">
+                <i class="fa-solid fa-plus" ></i> Agregar 
+            </a>
+        </div>
+    
+        <section th:fragment="Comentarios" id="comentarios" class="comment-container">
+            <div  th:if="${comentarios != null }"class="news-specific-container">
+                <div  th:each="comentarios : ${comentarios}" class="news-specific-data-container">
+                    <div class="title-notice">
+                        <h3 >Tema del comentario:</h3>
+                        <p class="name">[[${comentarios.nombre_comentario}]]</p>
+                    </div>
+                    <div class="box-comments">
+                        <h4>Comentario:</h4>
+
+                        <p class="text-description">[[${comentarios.descripcion_comentario}]]</p>
+                        <div class="button-comments">
+                            <a class="btn btn-Edit" th:href="@{/comentarios/modifica/}+${comentarios.id_comentario}">
+                                        <button class="fas fa-pencil"></button> </a>
+                            <a class="btn btn-Delete" th:href="@{/comentarios/eliminar/}+${comentarios.id_comentario}" >
+                                    <button class="fas fa-trash"></button>  </a>        
+                        </div>
+                    </div>
+                    <br>
+                      
+                </div>
+            </div>
+        </section>    
+</html>

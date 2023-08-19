@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+    <head> 
+        <title>GameSphere</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/7e36146f79.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <script th:src="@{/js/solid.js}"></script>
+        <script th:src="@{/js/fontawesome.js}"></script>
+  
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link th:href="@{/css/Noticias.css}" rel="stylesheet" type="text/css"/>
+    </head>
+    
+    <body>
+        <header th:fragment="header">
+                <nav class="nav-container">
+                    <!-- Links -->
+                    <div class="nav-links">
+                        <ul>
+                            <li><a  th:href="@{/}"><img th:src="@{/images/logo_nav.png}" alt="logo"/></li>
+                            <li><a  th:href="@{/producto/videojuegos}">Tienda</a></li>
+                            <li><a th:href="@{/noticias/noticias}">Noticias</a></li>
+                            <li><a th:href="@{/comentarios/comentarios}">Comunidad</a></li>
+                        </ul>
+                    </div>
+                    <!-- Icons -->
+                    <div class="nav-icons ">
+                        <span class="fa-layers fa-fw fa-5x">
+                            <i class="fa-solid fa-cart-shopping "></i>
+                            <span id="cart-number" class="fa-layers-counter fa-2x" style="background:Tomato">0</span>
+                        </span>
+
+                    </div>
+                </nav>
+            </header>
+
+            <h1>Editar comentario</h1>
+            
+        
+        <section th:fragment="comentariosModificar" class="news-containerM">
+           
+                <div class="info-container">
+                    <div class="main-informacion">
+                    <form method="POST" th:action="@{/comentarios/guardar}"  th:object="${comentarios}"
+                          class="was-validated" enctype="multipart/form-data">
+                        <input type="hidden" name="id_comentario" th:field="*{id_comentario}" />
+                        <div id=details class="info-container2">
+                                                <h3 class="text">Actualizar</h3>
+                                            
+                                                    <label class="text" for="nombre_comentario">Tema del comentario: </label>
+                                                    <input type="text" class="input"
+                                                           name="nombre_comentario" th:field="*{nombre_comentario}"
+                                                           required="true">
+                                               <hr color="#dcdde1" style="height:1px">
+                                                    <label class="text" for="descripcion_comentario">Comentario:</label>
+                                                    <input type="text" class="input"
+                                                           name="descripcion_comentario" th:field="*{descripcion_comentario}"
+                                                           required="true">
+                                             <hr color="#dcdde1" style="height:1px">
+                                </div>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            
+        </section>
+            
+           <div class="button-notices">
+                                                        <button type="submit" class="btn btn-Edit">
+                                                            <i class=""></i> Guardar
+                                                        </button>
+                                                        <a th:href="@{/noticias/noticias}" class="btn btn-Delete">
+                                                            <i class=""></i> Cancelar
+                                                        </a>
+                                                    </div>
+                
+    </body>
+</html>

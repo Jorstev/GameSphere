@@ -1,0 +1,261 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+
+:root{
+    --color-primary: #ffffff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+    
+}
+
+/*Header section*/
+html,body{
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #EEEEEE;
+}
+
+.nav-container.sticky{
+    position: fixed;
+    background-color: rgba(19, 33, 60, 0.8);
+    z-index: 3;
+}
+
+.nav-container{
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    background-color: #13213C;
+    color:#ffffff;
+}
+.nav-links{
+    width: 30%;
+    height: 100%;
+    font-size: 1.6rem;
+
+}
+.nav-links ul{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+}
+.nav-links ul li img{
+    background-size: cover;
+    height: 70px;
+    width: 70px;
+}
+
+.nav-links ul li a:link, a:visited{
+    color: var(--colorTipography);
+    text-decoration: none;
+}
+
+.nav-icons{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2%;
+    color: #ffffff;
+}
+
+
+/* Body */
+
+h1{
+color: #13213C;
+font-size: 28px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+position: relative;
+padding-top: 30px;
+padding-left: 30px;
+padding-bottom: 20px;
+}
+
+.comment-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    padding: 0 100px;
+}
+.title-comments{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    align-items: center;
+}
+.title-comments .name{
+    margin-top: 0.2%;
+    margin-left: 2%; 
+}
+.box-comments{
+    padding: 20px;
+    background-color:#ffffff;
+    box-shadow: rgba(206, 214, 224,1.0) 0px 7px 29px 0px;
+}
+.text-description{
+    margin-bottom: 1%;
+}
+.input {
+    background-color: #13213C;
+    padding: 5px 45px;
+    border-radius: 4px;
+    border: #FCA311;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button-comments{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
+.add-button{
+   margin-left:7%;
+   margin-bottom: 3%;
+}
+.add-button2{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
+.input-add {
+    background-color: #13213C;
+    padding: 5px 35px;
+    border-radius: 4px;
+    border: #FCA311;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 1%;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #FCA311;
+    font-weight: bold;
+}
+a:visited{
+    color: #ffffff;
+}
+.btn{
+    padding: 5px 35px;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 1%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-Information{
+     
+    background-color:#0abde3;;
+}
+
+.btn-Edit{
+    background-color:#FCA311;
+}
+
+.btn-Delete{
+    background-color: #eb4d4b;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.btn:visited{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+a:hover{
+    color: #FCA311;
+    font-weight: 700;
+}
+
+
+.main-informacion{
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+}
+.main-informacion .info-container{
+    height: 100vh;
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+    justify-content: space-around;
+}
+.main-informacion .info-container{
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+}
+.main-informacion .text{
+        color: #6f6f6f;
+    font-size: 1.6rem;
+}
+.news-containerM{
+    margin-left: 20%;
+    display: flex;
+}
+.input {
+    padding: 1vh 1vh;
+    background-color:#ffffff;
+    color:#13213C;
+}
+.main-informacion .info-container2 {
+    height: 40vh;
+    width: 160%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+    justify-content: space-around;
+}
+.button-notices{
+    display:flex;
+    flex-direction: row;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: space-around;
+}
