@@ -46,55 +46,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             <h1>Editar comentario</h1>
             
         
-        <section th:fragment="comentariosModificar">
-            <div class="comment-container">
-                <div class="col-md-2"></div>
-                <div class="col-md-8">
-                    <form method="POST"
-                          th:action="@{/comentarios/guardar}" 
-                          th:object="${comentarios}"
-                          class="was-validated"                          
-                          enctype="multipart/form-data">
-                        <input type="hidden" name="id_comentario" th:field="*{id_comentario}"/>
-                        <div id=details>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="card">
-                                            <div class="card-header">
-                                                <h4>Actualizar</h4>
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="mb-3">
-                                                    <label for="nombre_comentario">Tema del comentario: </label>
-                                                    <input type="text" class="form-control" 
+        <section th:fragment="comentariosModificar" class="news-containerM">
+           
+                <div class="info-container">
+                    <div class="main-informacion">
+                    <form method="POST" th:action="@{/comentarios/guardar}"  th:object="${comentarios}"
+                          class="was-validated" enctype="multipart/form-data">
+                        <input type="hidden" name="id_comentario" th:field="*{id_comentario}" />
+                        <div id=details class="info-container2">
+                                                <h3 class="text">Actualizar</h3>
+                                            
+                                                    <label class="text" for="nombre_comentario">Tema del comentario: </label>
+                                                    <input type="text" class="input"
                                                            name="nombre_comentario" th:field="*{nombre_comentario}"
                                                            required="true">
-                                                </div>
-                                                <div class="mb-3">
-                                                    <label for="descripcion_comentario">Comentario:</label>
-                                                    <input type="text" class="form-control" 
+                                               <hr color="#dcdde1" style="height:1px">
+                                                    <label class="text" for="descripcion_comentario">Comentario:</label>
+                                                    <input type="text" class="input"
                                                            name="descripcion_comentario" th:field="*{descripcion_comentario}"
                                                            required="true">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                             <hr color="#dcdde1" style="height:1px">
                                 </div>
                             </div>
+                    </div>
                     </form>
                 </div>
-            </div>
+            
         </section>
             
-            <div class="button-notices"> 
-                        <a class="input-add" th:href="@{/comentarios/comentarios}">
-                            <i class="fa-solid fa-arrow-left"></i></i>Regresar</a>
-                        <a class="input-add" th:href="@{/comentarios/eliminar/}+${comentarios.id_comentario}">
-                    <i class="fas fa-trash" ></i> Eliminar  </a>
-                        <a class="input-add" >
-                            <i class="fa-solid fa-floppy-disk"></i> Guardar </a>
-            </div>
+           <div class="button-notices">
+                                                        <button type="submit" class="btn btn-Edit">
+                                                            <i class=""></i> Guardar
+                                                        </button>
+                                                        <a th:href="@{/noticias/noticias}" class="btn btn-Delete">
+                                                            <i class=""></i> Cancelar
+                                                        </a>
+                                                    </div>
                 
     </body>
 </html>

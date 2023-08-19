@@ -22,10 +22,10 @@
                     <!-- Links -->
                     <div class="nav-links">
                         <ul>
-                            <li><img th:src="@{/images/logo_nav.png}" alt="logo"/></li>
+                            <li><a  th:href="@{/}"><img th:src="@{/images/logo_nav.png}" alt="logo"/></li>
                             <li><a  th:href="@{/producto/videojuegos}">Tienda</a></li>
                             <li><a th:href="@{/noticias/noticias}">Noticia</a></li>
-                            <li><a href="#">Favoritos</a></li>
+                            <li><a th:href="@{/comentarios/comentarios}">Comunidad</a></li>
                         </ul>
                     </div>
                     <!-- Icons -->
@@ -41,7 +41,7 @@
         
         <section th:fragment="noticiasModificar" class="news-containerM">
                     <form method="POST" th:action="@{/noticias/guardar}" 
-                          th:object="${noticias}" class="was-validated" enctype="multipart/form-data">
+                          th:object="${noticias}" enctype="multipart/form-data">
                         <input type="hidden" name="id_noticia" th:field="*{id_noticia}"/>
                         <div class="info-container">
                             <div id=details class="main-informacion">
