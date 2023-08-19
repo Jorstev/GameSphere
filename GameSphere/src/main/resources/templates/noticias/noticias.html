@@ -44,33 +44,32 @@
             <a class="input-add"   th:href="@{/noticias/agregar}">
                 <i class="fa-solid fa-plus"></i> Agregar 
             </a>
-        </div>
-        
-        <section th:fragment="Noticias" id="noticias" class="news-container">
-            <div  th:if="${noticias != null }"class="news-specific-container">
-                <div  th:each="noticias : ${noticias}" class="news-specific-data-container">
-                    
-                        <img class="news-specific-img-container2" id="xd" th:src="@{${noticias.imagen_noticia}}" alt="game" />
-                   
-                    <h3>[[${noticias.titulo_noticia}]]</h3>
-                    <p>[[${noticias.fecha_publicacion}]]</p>
-                    <br>
-                        <p>[[${noticias.descripcion_noticia}]]</p>
-                        <div class="button-notices">
-                            
-                        <a class="input" th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
-                            <i class="fas fa-pencil"></i> Modificar</a>
-                        <a class="input"  th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
-                            <i class="fas fa-trash"></i> Eliminar </a>
-                            
-                            <br><br>
-                        <a class="input"  th:href="@{/noticias/noticiaView/}+${noticias.id_noticia}">
-                            <i class="fas fa-info-circle"></i> Detalle </a>
+       
+            <section th:fragment="Noticias" id="noticias" class="news-container">
+                <div  th:if="${noticias != null }">
+                    <div  th:each="noticias : ${noticias}" class="news-specific-container">
+                        <div class="news-specific-img-container" >
+                            <img id="blah" th:src="@{${noticias.imagen_noticia}}" alt="game" />
                         </div>
+                        <div class="news-specific-data-container">
+                            <h3>[[${noticias.titulo_noticia}]]</h3>
+                            <p>[[${noticias.fecha_publicacion}]]</p>
+                            <p>[[${noticias.descripcion_noticia}]]</p>
+                            <div class="button-notices">
+                            <a class="btn btn-Edit"  th:href="@{/noticias/noticiaView/}+${noticias.id_noticia}">
+                                <button class="fas fa-info-circle"></button></a>
+                            <a class="btn btn-Information" th:href="@{/noticias/modifica/}+${noticias.id_noticia}">
+                              <button class="fas fa-pencil"></button> </a>
+                            <a class="btn btn-Delete" th:href="@{/noticias/eliminar/}+${noticias.id_noticia}">
+                              <button class="fas fa-trash"></button> </a>
+                        </div>
+                        </div>        
                         
+                        <br>
+                    </div>
+                    
                 </div>
-            </div>
-        </section>    
+            </div>  
         <br>
 
 </html>

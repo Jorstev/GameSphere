@@ -5,6 +5,7 @@
 package com.GameSphere.controller;
 
 import com.GameSphere.domain.noticias;
+import com.GameSphere.service.impl.FirebaseStorageServiceImpl;
 import com.GameSphere.service.impl.noticiasServiceImpl;
 import com.GameSphere.service.noticiasService;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
@@ -27,7 +29,8 @@ import org.springframework.web.multipart.MultipartFile;
 public class noticiasController {
     @Autowired
     private noticiasService NoticiasService;
-    //private FirebaseStorageServiceImpl firebaseStorageService;
+    @Autowired
+    private FirebaseStorageServiceImpl FirebaseStorageService;
     
     @GetMapping("/noticias")
     public String getNoticias(Model model){
@@ -36,22 +39,17 @@ public class noticiasController {
         return "/noticias/noticias";
     }
     
-    @GetMapping("/nuevo")
+    @GetMapping("/agregar")
     public String noticiasNuevo(noticias Noticias) {
         return "/noticias/agregar";
     }
 
-    @GetMapping("/guardar")
+    @PostMapping("/guardar")
     public String noticiasGuardar(noticias Noticias, @RequestParam("imagenFile") MultipartFile imagenFile) {
         if (!imagenFile.isEmpty()) {
             NoticiasService.saveN(Noticias);
-           /*Noticias.setImagen_noticia(
-                    firebaseStorageService.cargaImagen(
-                            imagenFile,
-                            "noticias",
-                            Noticias.getId_noticia()
-                    )
-            );*/ 
+            Noticias.setImagen_noticia(
+                    FirebaseStorageService.cargaImagen(imagenFile, "Noticias", Noticias.getId_noticia()));
         }
         NoticiasService.saveN(Noticias);
         return "redirect:/noticias/noticias";
@@ -62,7 +60,7 @@ public class noticiasController {
         NoticiasService.deleteN(Noticias);
         return "redirect:/noticias/noticias";
     }
-    @GetMapping("/modificar/{id_noticia}")
+    @GetMapping("/modifica/{id_noticia}")
     public String noticiasModificar(noticias Noticias, Model model) {
         Noticias = NoticiasService.getNoticias(Noticias);
         model.addAttribute("noticias", Noticias);

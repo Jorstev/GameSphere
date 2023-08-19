@@ -96,6 +96,7 @@ padding-bottom: 20px;
 }
 
 .news-container .news-specific-container{
+    margin-top: 10%;
     height: 25vh;
     width: 100%;
     display: flex;

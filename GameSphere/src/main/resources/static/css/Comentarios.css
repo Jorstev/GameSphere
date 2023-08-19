@@ -20,8 +20,8 @@ html,body{
     font-family: 'Poppins', sans-serif;
     height: 100%;
     width: 100%;
-    background-color: var(--color-primary);
     box-sizing: border-box;
+    background-color: #EEEEEE;
 }
 
 .nav-container.sticky{
@@ -108,8 +108,8 @@ padding-bottom: 20px;
 }
 .box-comments{
     padding: 20px;
-    background-color:  #EEEEEE;
-    
+    background-color:#ffffff;
+    box-shadow: rgba(206, 214, 224,1.0) 0px 7px 29px 0px;
 }
 .text-description{
     margin-bottom: 1%;
@@ -162,4 +162,48 @@ padding-bottom: 20px;
 a:hover{
     color: #FCA311;
     font-weight: bold;
+}
+a:visited{
+    color: #ffffff;
+}
+.btn{
+    padding: 5px 35px;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 1%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-Information{
+     
+    background-color:#0abde3;;
+}
+
+.btn-Edit{
+    background-color:#FCA311;
+}
+
+.btn-Delete{
+    background-color: #eb4d4b;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.btn:visited{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
+a:hover{
+    color: #FCA311;
+    font-weight: 700;
 }

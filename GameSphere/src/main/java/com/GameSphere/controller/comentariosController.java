@@ -36,23 +36,13 @@ public class comentariosController {
         return "/comentarios/comentarios";
     }
     
-    @GetMapping("/nuevo")
+    @GetMapping("/agregar")
     public String comentariosNuevo(comentarios Comentarios) {
         return "/comentarios/agregar";
     }
 
     @GetMapping("/guardar")
-    public String comentariosGuardar(comentarios Comentarios, @RequestParam("imagenFile") MultipartFile imagenFile) {
-        if (!imagenFile.isEmpty()) {
-            ComentariosService.saveC(Comentarios);
-           /*Comentarios.setImagen_noticia(
-                    firebaseStorageService.cargaImagen(
-                            imagenFile,
-                            "comentarios",
-                            Comentarios.getId_comentario()
-                    )
-            );*/ 
-        }
+    public String comentariosGuardar(comentarios Comentarios) {
         ComentariosService.saveC(Comentarios);
         return "redirect:/comentarios/comentarios";
     }

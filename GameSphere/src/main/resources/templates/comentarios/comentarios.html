@@ -63,10 +63,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                         <p class="text-description">[[${comentarios.descripcion_comentario}]]</p>
                         <div class="button-comments">
-                            <a class="input" th:href="@{/comentarios/modifica/}+${comentarios.id_comentario}">>
-                                        <i class="fas fa-pencil"></i> Modificar </a>
-                            <a class="input" th:href="@{/comentarios/eliminar/}+${comentarios.id_comentario}" >
-                                    <i class="fas fa-trash"></i> Eliminar </a>        
+                            <a class="btn btn-Edit" th:href="@{/comentarios/modifica/}+${comentarios.id_comentario}">
+                                        <button class="fas fa-pencil"></button> </a>
+                            <a class="btn btn-Delete" th:href="@{/comentarios/eliminar/}+${comentarios.id_comentario}" >
+                                    <button class="fas fa-trash"></button>  </a>        
                         </div>
                     </div>
                     <br>

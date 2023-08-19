@@ -14,8 +14,8 @@ html,body{
     font-family: 'Poppins', sans-serif;
     height: 100%;
     width: 100%;
-    background-color: var(--color-primary);
     box-sizing: border-box;
+    background-color: #EEEEEE;
 }
 
 .nav-container.sticky{
@@ -117,10 +117,12 @@ padding-bottom: 20px;
     color: var(--colorTipography);
     font-size: 1.6rem;
     padding: 0 100px;
+    
 }
 
 .news-container .news-specific-container{
-    height: 25vh;
+    margin-top: 2%;
+    height: 30vh;
     width: 100%;
     display:flex;
     flex-direction: row;
@@ -134,8 +136,8 @@ padding-bottom: 20px;
 }
 
 .news-container .news-specific-container .news-specific-img-container{
-    height: 25vh;
-    width: 30%;
+    height: 30vh;
+    width: 40%;
 
 }
 .news-container .news-specific-container .news-specific-img-container2{
@@ -151,7 +153,7 @@ padding-bottom: 20px;
 .news-container .news-specific-container .news-specific-data-container{
     height: 25vh;
     width: 50%;
-    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .news-container .news-specific-container .news-specific-data-container h3{
@@ -170,8 +172,90 @@ padding-bottom: 20px;
     align-items: center;
     justify-content: space-around;
 }
+
+.btn{
+    padding: 5px 35px;
+    border-radius: 4px;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 1%;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.btn-Information{
+     
+    background-color:#0abde3;;
+}
+
+.btn-Edit{
+    background-color:#FCA311;
+    border: none;
+}
+
+.btn-Delete{
+    background-color: #eb4d4b;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.btn:visited{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
 a:hover{
     color: #FCA311;
-    font-weight: 500;
+    font-weight: 700;
+}
+.main-informacion{
+    color: var(--colorTipography);
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+}
+.main-informacion .info-container{
+    height: 100vh;
+    width: 200%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+    justify-content: space-around;
+}
+.main-informacion .info-container{
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+}
+.main-informacion .text{
+        color: #6f6f6f;
+    font-size: 1.6rem;
+}
+.news-containerM{
+    margin-left: 20%;
+    display: flex;
+}
+.input {
+    padding: 1vh 1vh;
+    background-color:#ffffff;
+    color:#13213C;
+}
+.main-informacion .info-container2 {
+    height: 50vh;
+    width: 180%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    padding: 0 5vh 0 5vh;
+    justify-content: space-around;
 }
 

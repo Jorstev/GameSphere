@@ -14,8 +14,8 @@ html,body{
     font-family: 'Poppins', sans-serif;
     height: 100%;
     width: 100%;
-    background-color: var(--color-primary);
     box-sizing: border-box;
+    background-color: #EEEEEE;
 }
 
 .nav-container.sticky{
@@ -139,7 +139,7 @@ padding-bottom: 20px;
 
 }
 .news-container .news-specific-container .news-specific-img-container2{
-    width: 100%;
+    width: 50%;
 }
 .news-container img{
     object-fit: cover;
@@ -195,8 +195,27 @@ padding-bottom: 20px;
     align-items: center;
     justify-content: space-around;
 }
+.btn-Edit{
+    background-color:#FCA311;
+}
+
+.btn-Delete{
+    background-color: #eb4d4b;
+}
+.btn:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+.btn:visited{
+    color: #ffffff;
+}
+
+a:visited{
+    color: #ffffff;
+}
+
 a:hover{
     color: #FCA311;
-    font-weight: 500;
+    font-weight: 700;
 }
 
