@@ -16,6 +16,8 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                         <script th:src="@{/js/fontawesome.js}"></script>
                         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
                             <link rel="stylesheet" th:href="@{/css/Payment.css}"/>
+                            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
                             </head>
                             <body>
                                 <header>
@@ -53,7 +55,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
 
                                             <p class="game-Name">[[${videojuego.nombre_juego}]]</p>
-                                            <p class="game-price">$[[${videojuego.precio}]]</p>
+                                            <p class="game-price">[[${videojuego.precio}]]</p>
                                             <div class="btn-container">
 
                                                 <button class="btn btn-AddCart" type="submit"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
@@ -176,7 +178,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                                                                             <input type="text" maxlength="4" class="cvv-input">
                                                                         </div>
                                                                     </div>
-                                                                    <input type="submit" value="submit" class="submit-btn">
+                                                                    <input id="submit-Payment" type="submit" value="submit" class="submit-btn">
                                                                 </form>
 
                                                                 </div>  

@@ -37,6 +37,7 @@ const shoppingCart = document.querySelector('.fa-cart-shopping');
 const productContainer = document.querySelector('.items-container');
 const productItem = document.querySelectorAll('.item');
 const btnRemove = document.querySelector('.btn-remove');
+const btnPayment = document.querySelector('#submit-Payment');
 
 productContainer.innerHTML = "";
 
@@ -44,10 +45,11 @@ AddtoCart.forEach((btn) => {
     btn.addEventListener('click', function () {
         cartNumber.textContent++;
         let parentParent = btn.parentElement;
-      
+
         let parent = parentParent.parentElement;
         let name = parent.querySelector('.game-Name').textContent;
         let price = parent.querySelector('.game-price').textContent;
+       
         let html = `<div class="item">
                         <p>${name}</p>
                         <p>$<span class="class">${price}</span></p>
@@ -57,8 +59,16 @@ AddtoCart.forEach((btn) => {
     });
 });
 
+btnPayment.addEventListener('click', function (e) {
+    e.preventDefault();
+    console.log('test');
+    swal("Pago Procesado", "Disfrute su videojuego", "success");
+    cartNumber.textContent=0;
+    productContainer.innerHTML = "";
+})
+
 console.log(productItem);
-btnRemove.forEach(function(btn){
+btnRemove.forEach(function (btn) {
     btn.addEventListener('click', function () {
         productItem.remove();
     });
