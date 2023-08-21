@@ -34,7 +34,19 @@
                             <i class="fa-solid fa-cart-shopping "></i>
                             <span id="cart-number" class="fa-layers-counter fa-2x" style="background:Tomato">0</span>
                         </span>
+                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
+                        <li class="nav-item">
+                            <a class="nav-link" th:href="@{/login}"><i class="fas fa-sign-in-alt"></i> Login</a>
+                        </li>
+                    </ul>
 
+                    <ul class="navbar-nav" sec:authorize="isAuthenticated()">
+                        <li class="nav-item text-white my-auto">
+                            <span class="fas fa-user"></span> <span sec:authentication="name"></span>
+                        </li>
+                        <li class="nav-item my-auto">
+                            <form method="post" th:action="@{/logout}">
+                                <button class="btn btn-dark" type="submit"><i class="fas fa-sign-out-alt"></i> Logout</button>
                     </div>
                 </nav>
             </header>
