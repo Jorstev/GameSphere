@@ -50,7 +50,7 @@ html,body{
 
     margin: 2%;
 }
-.games-container .agregar-container{
+#agregar-container{
     height: 40vh;
     width: 20%;
     display: flex;
@@ -64,8 +64,7 @@ html,body{
     font-size: 1rem;
     cursor: pointer;
 }
-
-.games-container .agregar-container:hover{
+#agregar-container:hover{
     color: var(--color-secondary);
 }
 

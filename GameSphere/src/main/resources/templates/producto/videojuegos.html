@@ -63,9 +63,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                                                 </button>
                                                 <a th:href="@{/producto/videojuegoInfo/}+${videojuego.id_juego}"><button class="btn btn-Informacion" type="submit"><i class="fa fa-info-circle" aria-hidden="true"></i>
-                                                </button></a>
-                                                    
-                                                    
+                                                    </button></a>
+
+
                                                 <div sec:authorize="hasRole('ROLE_ADMIN')">
                                                     <a th:href="@{/producto/videojuegoEditar/}+${videojuego.id_juego}">
                                                         <button class="btn btn-Edit" type="submit">
@@ -73,28 +73,27 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
 
                                                         </button>
                                                     </a>
-                                                </div>
-                                                
-                                                <div sec:authorize="hasRole('ROLE_ADMIN')">
                                                     <a th:href="@{/producto/eliminar/}+${videojuego.id_juego}">
                                                         <button class="btn btn-Delete" type="submit">
                                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                                         </button>
                                                     </a>
                                                 </div>
-                                                
+
+
+
                                             </div>
 
                                         </div>
 
 
                                         </div>
-                                        
-                                        <div sec:authorize="hasRole('ROLE_ADMIN')">
-                                        <a class="agregar-container" th:href="@{/producto/videojuegoAgregar}">
-                                            <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
-                                            <p class="txt-agregar">Agregar</p>
-                                        </a>
+
+                                        <div id="agregar-container" sec:authorize="hasRole('ROLE_ADMIN')">
+                                            <a  th:href="@{/producto/videojuegoAgregar}">
+                                                <i class="fa fa-plus-circle fa-5x" aria-hidden="true"></i>
+                                                <p class="txt-agregar">Agregar</p>
+                                            </a>
                                         </div>
 
                                     </section>

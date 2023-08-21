@@ -9,11 +9,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
+
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -42,11 +41,11 @@ public class ProjectConfig implements WebMvcConfigurer {
                         "/registro/**", "/js/**", "/webjars/**", "/css/**", "/images/**")
                 .permitAll()
                 .requestMatchers(
-                       "/index", "/producto/videojuegos", "/producto/videojuegoAgregar", "/producto/videojuegoEditar/1", "/producto/videojuegoEditar/2", "/producto/videojuegoEditar/3", "/producto/videojuegoEditar/4",
+                       "/index", "/producto/videojuegos", "/producto/videojuegoAgregar", "/producto/videojuegoEditar/1", "/producto/videojuegoEditar/2", "/producto/videojuegoEditar/3", "/producto/videojuegoEditar/4","/producto/eliminar/1", "/producto/eliminar/2", "/producto/eliminar/3", "/producto/eliminar/4","/producto/guardar",
                         "/producto/videojuegoInfo/1", "/producto/videojuegoInfo/2", "/producto/videojuegoInfo/3", "/producto/videojuegoInfo/4",
                         
-                        "/noticias/noticias",  "/noticias/modifica/1", "/noticias/modifica/2", "/noticias/modifica/3" , "/noticias/agregar",
-                        "/noticias/noticiaView/1", "/noticias/noticiaView/2", "/noticias/noticiaView/3", "/comentarios/agregar",
+                        "/noticias/noticias",  "/noticias/modifica/1", "/noticias/modifica/2", "/noticias/modifica/3" , "/noticias/agregar", "/noticias/eliminar/1", "/noticias/eliminar/2", "/noticias/eliminar/3","/noticias/guardar",
+                        "/noticias/noticiaView/1", "/noticias/noticiaView/2", "/noticias/noticiaView/3", "/comentarios/agregar","/comentarios/guardar","/comentarios/modifica/1","/comentarios/modifica/2","/comentarios/modifica/3","/comentarios/eliminar/1","/comentarios/eliminar/2","/comentarios/eliminar/3",
                         "/comentarios/comentarios" 
                 ).hasAnyRole("ADMIN" , "USER")
                 )
